@@ -96,6 +96,7 @@
         .skill-card svg {
             width: 24px;
             height: 24px;
+            flex-shrink: 0;
         }
 
     </style>
@@ -107,7 +108,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold text-white">Leonardo Marx</a>
+                    <a href="#" class="text-xl font-semibold text-gray-200 hover:text-white transition-colors">Leonardo Marx</a>
                 </div>
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#skills" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Skills</a>
@@ -171,43 +172,33 @@
                     <!-- Coluna 1: Redes & Segurança -->
                     <div class="space-y-4">
                         <h3 class="font-bold text-xl text-violet-400 mb-4 text-center">Redes & Segurança</h3>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-red-500"><title>MikroTik</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8,8,3.59,8,8S16.41,20,12,20z M12,6c-3.31,0-6,2.69-6,6s2.69,6,6,6,6-2.69,6-6S15.31,6,12,6z M12,16c-2.21,0-4-1.79-4-4s1.79-4,4-4,4,1.79,4,4S14.21,16,12,16z"/></svg><span>MikroTik (MTCRE, MTCTCE)</span></div>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-red-600"><title>pfSense</title><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg><span>pfSense</span></div>
-                        <div class="skill-card"><span>Firewalls (FortiGate, SonicWall)</span></div>
-                        <div class="skill-card"><span>VPNs (IPSec, OpenVPN, WireGuard)</span></div>
-                        <div class="skill-card"><span>Redes Ópticas (PON) & EIGRP</span></div>
+                        <div class="skill-card"><svg class="text-red-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>MikroTik</title><path d="M0 16.27v-8.4L12.01 2l12.02 5.86v8.4L12.01 22Zm12.01-1.84 8.12-3.95v-4.9L12.01 4.1 3.89 7.58v4.9l8.12 3.95ZM8.56 9.68h6.9v1.6H8.57Zm0 3.23h6.9v1.6H8.57Z"/></svg><span>MikroTik (MTCRE, MTCTCE)</span></div>
+                        <div class="skill-card"><svg class="text-red-600" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>pfSense</title><path d="M12.005 2.001C5.643 1.99 1.37 5.823.854 11.085l-.06.602 1.34 5.39.06.25c.523 5.23 4.793 9.04 10.15 9.04h.3c5.522 0 10-4.477 10-10s-4.478-10-10-10h-.638Zm-.005 1.5c4.704 0 8.5 3.797 8.5 8.501 0 4.703-3.796 8.5-8.5 8.5-4.48 0-8.23-3.455-8.48-7.892l-1.02-4.113c.04-4.524 4.14-8.003 8.48-8.003l.02.007Z"/></svg><span>pfSense</span></div>
+                        <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-300"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.602-3.751m-.228-1.12A12.023 12.023 0 0018 5.25c-2.348-.574-4.833-.574-7.18 0z" /></svg><span>Firewalls (FortiGate, SonicWall)</span></div>
+                        <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-300"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h16.5a1.5 1.5 0 001.5-1.5v-6a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v6a1.5 1.5 0 001.5 1.5z" /></svg><span>VPNs (IPSec, OpenVPN, WireGuard)</span></div>
+                        <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-300"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3.75H19.5M8.25 6.75H19.5M8.25 9.75H19.5M8.25 12.75H19.5m-15-8.25v15l-3-3m3 3l3-3m-3 3H3.75" /></svg><span>Redes Ópticas (PON) & EIGRP</span></div>
                     </div>
                     <!-- Coluna 2: Desenvolvimento & Automação -->
                     <div class="space-y-4">
                         <h3 class="font-bold text-xl text-violet-400 mb-4 text-center">Desenvolvimento & Automação</h3>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-blue-400"><title>Python</title><path d="M23.12,9.92h-2.1c-0.35,0-0.64,0.29-0.64,0.64v3.88c0,0.35,0.29,0.64,0.64,0.64h2.1c0.35,0,0.64-0.29,0.64-0.64v-3.88C23.76,10.21,23.47,9.92,23.12,9.92z M22.48,13.8h-1.42v-2.56h1.42V13.8z M19.44,9.92H4.48c-0.49,0-0.88,0.39-0.88,0.88v4.4c0,0.49,0.39,0.88,0.88,0.88h14.96c0.49,0,0.88-0.39,0.88-0.88v-4.4C20.32,10.31,19.93,9.92,19.44,9.92z M18.96,14.56h-1.76v-2.88h1.76V14.56z M15.44,14.56h-1.76v-2.88h1.76V14.56z M11.92,14.56h-1.76v-2.88h1.76V14.56z M8.4,14.56H6.64v-2.88H8.4V14.56z M4.88,14.56H3.12v-2.88h1.76V14.56z"/></svg><span>Python</span></div>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-cyan-400"><title>React</title><path d="M12.001 2.002c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10s10-4.477 10-10c0-5.522-4.478-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.46-4.52c-.29.29-.76.29-1.05 0l-3.41-3.41-3.41 3.41c-.29.29-.76.29-1.05 0-.29-.29-.29-.76 0-1.05l3.41-3.41-3.41-3.41c-.29-.29-.29-.76 0-1.05s.76-.29 1.05 0l3.41 3.41 3.41-3.41c.29-.29.76-.29 1.05 0s.29.76 0 1.05l-3.41 3.41 3.41 3.41c.29.29.29.76 0 1.05z"/></svg><span>React</span></div>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-green-400"><title>Node.js</title><path d="M21.579,8.948h-3.054c-0.34,0-0.616,0.276-0.616,0.616v4.87c0,0.34,0.276,0.616,0.616,0.616h3.054c0.34,0,0.616-0.276,0.616-0.616v-4.87C22.195,9.224,21.919,8.948,21.579,8.948z M20.979,13.818h-1.833v-3.65h1.833V13.818zM17.309,8.948H2.396c-0.45,0-0.814,0.364-0.814,0.814v5.476c0,0.45,0.364,0.814,0.814,0.814h14.913c0.45,0,0.814-0.364,0.814-0.814V9.762C18.123,9.312,17.759,8.948,17.309,8.948z M16.913,14.63h-1.611v-3.23h1.611V14.63z M14.103,14.63h-1.611v-3.23h1.611V14.63z M11.293,14.63H9.682v-3.23h1.611V14.63z M8.483,14.63H6.872v-3.23h1.611V14.63z M5.673,14.63H4.062v-3.23h1.611V14.63z"/></svg><span>Node.js</span></div>
-                        <div class="skill-card"><span>Shell Script & APIs REST</span></div>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-cyan-400"><title>Tailwind CSS</title><path d="M12.001 2.002c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10s10-4.477 10-10c0-5.522-4.478-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.46-4.52c-.29.29-.76.29-1.05 0l-3.41-3.41-3.41 3.41c-.29.29-.76.29-1.05 0-.29-.29-.29-.76 0-1.05l3.41-3.41-3.41-3.41c-.29-.29-.29-.76 0-1.05s.76-.29 1.05 0l3.41 3.41 3.41-3.41c.29-.29.76-.29 1.05 0s.29.76 0 1.05l-3.41 3.41 3.41 3.41c.29.29.29.76 0 1.05z"/></svg><span>Tailwind CSS</span></div>
+                        <div class="skill-card"><svg class="text-blue-400" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Python</title><path d="M23.12,9.92h-2.1c-0.35,0-0.64,0.29-0.64,0.64v3.88c0,0.35,0.29,0.64,0.64,0.64h2.1c0.35,0,0.64-0.29,0.64-0.64v-3.88C23.76,10.21,23.47,9.92,23.12,9.92z M22.48,13.8h-1.42v-2.56h1.42V13.8z M19.44,9.92H4.48c-0.49,0-0.88,0.39-0.88,0.88v4.4c0,0.49,0.39,0.88,0.88,0.88h14.96c0.49,0,0.88-0.39,0.88-0.88v-4.4C20.32,10.31,19.93,9.92,19.44,9.92z M18.96,14.56h-1.76v-2.88h1.76V14.56z M15.44,14.56h-1.76v-2.88h1.76V14.56z M11.92,14.56h-1.76v-2.88h1.76V14.56z M8.4,14.56H6.64v-2.88H8.4V14.56z M4.88,14.56H3.12v-2.88h1.76V14.56z"/></svg><span>Python</span></div>
+                        <div class="skill-card"><svg class="text-cyan-400" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>React</title><path d="M12.001 2.002c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10s10-4.477 10-10c0-5.522-4.478-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.46-4.52c-.29.29-.76.29-1.05 0l-3.41-3.41-3.41 3.41c-.29.29-.76.29-1.05 0-.29-.29-.29-.76 0-1.05l3.41-3.41-3.41-3.41c-.29-.29-.29-.76 0-1.05s.76-.29 1.05 0l3.41 3.41 3.41-3.41c.29-.29.76-.29 1.05 0s.29.76 0 1.05l-3.41 3.41 3.41 3.41c.29.29.29.76 0 1.05z"/></svg><span>React</span></div>
+                        <div class="skill-card"><svg class="text-green-400" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Node.js</title><path d="M21.579,8.948h-3.054c-0.34,0-0.616,0.276-0.616,0.616v4.87c0,0.34,0.276,0.616,0.616,0.616h3.054c0.34,0,0.616-0.276,0.616-0.616v-4.87C22.195,9.224,21.919,8.948,21.579,8.948z M20.979,13.818h-1.833v-3.65h1.833V13.818zM17.309,8.948H2.396c-0.45,0-0.814,0.364-0.814,0.814v5.476c0,0.45,0.364,0.814,0.814,0.814h14.913c0.45,0,0.814-0.364,0.814-0.814V9.762C18.123,9.312,17.759,8.948,17.309,8.948z M16.913,14.63h-1.611v-3.23h1.611V14.63z M14.103,14.63h-1.611v-3.23h1.611V14.63z M11.293,14.63H9.682v-3.23h1.611V14.63z M8.483,14.63H6.872v-3.23h1.611V14.63z M5.673,14.63H4.062v-3.23h1.611V14.63z"/></svg><span>Node.js</span></div>
+                        <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-300"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg><span>Shell Script & APIs REST</span></div>
+                        <div class="skill-card"><svg class="text-cyan-400" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Tailwind CSS</title><path d="M12.001 2.002c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10s10-4.477 10-10c0-5.522-4.478-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.46-4.52c-.29.29-.76.29-1.05 0l-3.41-3.41-3.41 3.41c-.29.29-.76.29-1.05 0-.29-.29-.29-.76 0-1.05l3.41-3.41-3.41-3.41c-.29-.29-.29-.76 0-1.05s.76-.29 1.05 0l3.41 3.41 3.41-3.41c.29-.29.76-.29 1.05 0s.29.76 0 1.05l-3.41 3.41 3.41 3.41c.29.29.29.76 0 1.05z"/></svg><span>Tailwind CSS</span></div>
                     </div>
                     <!-- Coluna 3: Infra & DevOps -->
                     <div class="space-y-4">
                         <h3 class="font-bold text-xl text-violet-400 mb-4 text-center">Infraestrutura & DevOps</h3>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-blue-500"><title>VMware</title><path d="M21.94,5.66H2.06C1.14,5.66,0.4,6.4,0.4,7.32v9.36c0,0.92,0.74,1.66,1.66,1.66h19.88c0.92,0,1.66-0.74,1.66-1.66V7.32C23.6,6.4,22.86,5.66,21.94,5.66z M22,16.68c0,0.1-0.08,0.18-0.18,0.18H2.18C2.08,16.86,2,16.78,2,16.68V7.32C2,7.22,2.08,7.14,2.18,7.14h19.64c0.1,0,0.18,0.08,0.18,0.18V16.68z M5,14h2v-4H5V14z M8,14h2v-4H8V14z M11,14h2v-4h-2V14z M14,14h2v-4h-2V14z M17,14h2v-4h-2V14z"/></svg><span>VMware</span></div>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-gray-300"><title>Linux</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8,8,3.59,8,8S16.41,20,12,20z M12,11.5c-0.83,0-1.5-0.67-1.5-1.5s0.67-1.5,1.5-1.5,1.5,0.67,1.5,1.5S12.83,11.5,12,11.5z M12,14.5c2.21,0,4-1.79-4-4s-1.79-4-4-4-4,1.79-4,4S9.79,14.5,12,14.5z"/></svg><span>Linux</span></div>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-blue-500"><title>Docker</title><path d="M22.992 6.332c-.528 0-1.056.02-1.583.058l-2.454.116-2.433.116-2.414.116-2.413.115-2.394.116-2.393.116L4.514 7.205l-1.58.077c-.528.025-1.056.05-1.584.076L0 7.49v7.02l1.348-.135c.528-.054 1.056-.107 1.584-.16L4.514 14.1l2.393-.116 2.394-.116 2.413-.115 2.414-.116 2.433-.116 2.454-.116 1.583-.058c.527-.02 1.055-.038 1.583-.058V6.332zM7.05 10.458H4.675v2.373H7.05v-2.373zm2.597 0H7.272v2.373h2.374v-2.373zm2.598 0H9.87v2.373h2.374v-2.373zm2.597 0h-2.373v2.373h2.373v-2.373zm-5.195-2.597H4.675v2.373H7.05v-2.373zm2.597 0H7.272v2.373h2.374v-2.373zm2.598 0H9.87v2.373h2.374v-2.373zm2.597 0h-2.373v2.373h2.373v-2.373zm-2.597-2.598h-2.374v2.374h2.374v-2.374zM16.92 1.348A3.33 3.33 0 0 0 13.59.02a.84.84 0 0 0-.21.018A3.2 3.2 0 0 0 11.007.02a.84.84 0 0 0-.21-.018A3.33 3.33 0 0 0 7.466 1.348a3.19 3.19 0 0 0-1.26 2.413l.057.296h1.776l-.037-.218a1.32 1.32 0 0 1 .5-.96.93.93 0 0 1 .63-.217c.277 0 .553.095.553.475v.218h2.393v-.218c0-.38.276-.475.553-.475a.93.93 0 0 1 .63.218c.276.275.462.63.5.96l-.036.217h1.776l.057-.296A3.19 3.19 0 0 0 16.92 1.347z"/></svg><span>Docker</span></div>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-green-500"><title>NGINX</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M16.5,15.5H7.5V8.5h9V15.5z M15,10h-6v4h6V10z"/></svg><span>NGINX & HAProxy</span></div>
-                        <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-orange-500"><title>Git</title><path d="M21.1,10.9l-8.2,8.2c-0.4,0.4-1,0.4-1.4,0L3.3,11.3c-0.4-0.4-0.4-1,0-1.4l8.2-8.2c0.4-0.4,1-0.4,1.4,0l8.2,8.2C21.5,9.9,21.5,10.5,21.1,10.9z M12,14L6,8l6-6,6,6L12,14z"/></svg><span>Git & GitHub</span></div>
+                        <div class="skill-card"><svg class="text-blue-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>VMware</title><path d="M21.94,5.66H2.06C1.14,5.66,0.4,6.4,0.4,7.32v9.36c0,0.92,0.74,1.66,1.66,1.66h19.88c0.92,0,1.66-0.74,1.66-1.66V7.32C23.6,6.4,22.86,5.66,21.94,5.66z M22,16.68c0,0.1-0.08,0.18-0.18,0.18H2.18C2.08,16.86,2,16.78,2,16.68V7.32C2,7.22,2.08,7.14,2.18,7.14h19.64c0.1,0,0.18,0.08,0.18,0.18V16.68z M5,14h2v-4H5V14z M8,14h2v-4H8V14z M11,14h2v-4h-2V14z M14,14h2v-4h-2V14z M17,14h2v-4h-2V14z"/></svg><span>VMware</span></div>
+                        <div class="skill-card"><svg class="text-gray-300" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Linux</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8,8,3.59,8,8S16.41,20,12,20z M12,11.5c-0.83,0-1.5-0.67-1.5-1.5s0.67-1.5,1.5-1.5,1.5,0.67,1.5,1.5S12.83,11.5,12,11.5z M12,14.5c2.21,0,4-1.79-4-4s-1.79-4-4-4-4,1.79-4,4S9.79,14.5,12,14.5z"/></svg><span>Linux</span></div>
+                        <div class="skill-card"><svg class="text-blue-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Docker</title><path d="M22.992 6.332c-.528 0-1.056.02-1.583.058l-2.454.116-2.433.116-2.414.116-2.413.115-2.394.116-2.393.116L4.514 7.205l-1.58.077c-.528.025-1.056.05-1.584.076L0 7.49v7.02l1.348-.135c.528-.054 1.056-.107 1.584-.16L4.514 14.1l2.393-.116 2.394-.116 2.413-.115 2.414-.116 2.433-.116 2.454-.116 1.583-.058c.527-.02 1.055-.038 1.583-.058V6.332zM7.05 10.458H4.675v2.373H7.05v-2.373zm2.597 0H7.272v2.373h2.374v-2.373zm2.598 0H9.87v2.373h2.374v-2.373zm2.597 0h-2.373v2.373h2.373v-2.373zm-5.195-2.597H4.675v2.373H7.05v-2.373zm2.597 0H7.272v2.373h2.374v-2.373zm2.598 0H9.87v2.373h2.374v-2.373zm2.597 0h-2.373v2.373h2.373v-2.373zm-2.597-2.598h-2.374v2.374h2.374v-2.374zM16.92 1.348A3.33 3.33 0 0 0 13.59.02a.84.84 0 0 0-.21.018A3.2 3.2 0 0 0 11.007.02a.84.84 0 0 0-.21-.018A3.33 3.33 0 0 0 7.466 1.348a3.19 3.19 0 0 0-1.26 2.413l.057.296h1.776l-.037-.218a1.32 1.32 0 0 1 .5-.96.93.93 0 0 1 .63-.217c.277 0 .553.095.553.475v.218h2.393v-.218c0-.38.276-.475.553-.475a.93.93 0 0 1 .63.218c.276.275.462.63.5.96l-.036.217h1.776l.057-.296A3.19 3.19 0 0 0 16.92 1.347z"/></svg><span>Docker</span></div>
+                        <div class="skill-card"><svg class="text-green-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>NGINX</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M16.5,15.5H7.5V8.5h9V15.5z M15,10h-6v4h6V10z"/></svg><span>NGINX & HAProxy</span></div>
+                        <div class="skill-card"><svg class="text-orange-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Git</title><path d="M21.1,10.9l-8.2,8.2c-0.4,0.4-1,0.4-1.4,0L3.3,11.3c-0.4-0.4-0.4-1,0-1.4l8.2-8.2c0.4-0.4,1-0.4,1.4,0l8.2,8.2C21.5,9.9,21.5,10.5,21.1,10.9z M12,14L6,8l6-6,6,6L12,14z"/></svg><span>Git & GitHub</span></div>
                     </div>
                 </div>
             </section>
             
-            <!-- ===== 3. Seção "Sobre Mim" (About) ===== -->
-            <section id="sobre" class="py-20 scroll-animate">
-                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Sobre Mim</h2>
-                <div class="max-w-4xl mx-auto text-center text-lg leading-relaxed">
-                    <p class="mb-4">Sou um profissional focado em infraestrutura de redes e segurança, com sólida experiência em VPNs, firewalls (MikroTik, pfSense), virtualização com VMware e automação.</p>
-                    <p class="mb-4">Minha paixão por tecnologia me levou a expandir minhas competências para o desenvolvimento web, criando dashboards e ferramentas que otimizam processos e melhoram a visibilidade de dados.</p>
-                    <p class="font-semibold text-violet-300">Focado em resultados técnicos concretos, performance operacional e segurança de alto nível.</p>
-                </div>
-            </section>
-
             <!-- ===== 5. Projetos em Destaque ===== -->
             <section id="projetos" class="py-20 scroll-animate">
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Projetos em Destaque</h2>
@@ -239,6 +230,16 @@
                             <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- ===== 3. Seção "Sobre Mim" (About) ===== -->
+            <section id="sobre" class="py-20 scroll-animate">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Sobre Mim</h2>
+                <div class="max-w-4xl mx-auto text-center text-lg leading-relaxed">
+                    <p class="mb-4">Sou um profissional focado em infraestrutura de redes e segurança, com sólida experiência em VPNs, firewalls (MikroTik, pfSense), virtualização com VMware e automação.</p>
+                    <p class="mb-4">Minha paixão por tecnologia me levou a expandir minhas competências para o desenvolvimento web, criando dashboards e ferramentas que otimizam processos e melhoram a visibilidade de dados.</p>
+                    <p class="font-semibold text-violet-300">Focado em resultados técnicos concretos, performance operacional e segurança de alto nível.</p>
                 </div>
             </section>
             
@@ -275,7 +276,7 @@
     </section>
 
     <footer class="bg-black text-center py-6">
-        <p class="text-gray-500">&copy; 2024 Leonardo Marx. Todos os direitos reservados.</p>
+        <p class="text-gray-500">&copy; 2025 Leonardo Marx. Todos os direitos reservados.</p>
     </footer>
 
     <!-- Scripts -->
