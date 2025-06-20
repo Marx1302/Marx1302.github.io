@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Marx | Analista de Redes • Segurança • Automação</title>
+    <meta name="description" content="Portfólio profissional de Leonardo Marx, especialista em infraestrutura de redes, segurança, automação e desenvolvimento web com foco em resultados.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles & Config -->
+    <style>
+        /* Define a fonte Inter como padrão */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Fundo principal um pouco mais escuro */
+        }
+
+        /* Efeito de gradiente no texto do herói */
+        .gradient-text {
+            background: linear-gradient(to right, #a78bfa, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        /* Fundo com gradiente sutil para o herói */
+        .hero-bg {
+             background-color: #0a0a0a;
+             background-image: radial-gradient(#1e1b4b 1px, transparent 0);
+             background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="text-gray-300 antialiased">
+
+    <!-- ===== 1. Header (Cabeçalho Principal) ===== -->
+    <header class="bg-black bg-opacity-80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Nome/Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white">Leonardo Marx</a>
+                </div>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#sobre" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Sobre Mim</a>
+                    <a href="#skills" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Skills</a>
+                    <a href="#projetos" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Projetos</a>
+                    <a href="#contato" class="bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contato</a>
+                </nav>
+
+                <!-- Botão Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#sobre" class="block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium">Sobre Mim</a>
+                <a href="#skills" class="block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium">Skills</a>
+                <a href="#projetos" class="block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium">Projetos</a>
+                <a href="#contato" class="block bg-violet-600 text-white rounded-md px-3 py-3 text-base font-medium mt-2">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== 2. Hero Section (Banner Visual) ===== -->
+        <section id="home" class="hero-bg pt-32 pb-20 text-center">
+            <div class="max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight gradient-text">
+                    Leonardo Marx
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl font-light text-gray-400">
+                    Analista de Redes • Segurança • Automação Web
+                </p>
+                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
+                    "Infraestrutura e Desenvolvimento que geram resultados."
+                </p>
+                <!-- Ícones Sociais -->
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://github.com/seu-usuario" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/seu-usuario" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                    </a>
+                    <a href="mailto:seu-email@dominio.com" class="text-gray-400 hover:text-violet-400 transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- ===== 3. Seção "Sobre Mim" (About) ===== -->
+            <section id="sobre" class="py-20">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Sobre Mim</h2>
+                <div class="max-w-4xl mx-auto text-center text-lg leading-relaxed">
+                    <p class="mb-4">
+                        Sou um profissional focado em infraestrutura de redes e segurança, com sólida experiência em VPNs, firewalls (MikroTik, pfSense), virtualização com VMware e automação.
+                    </p>
+                    <p class="mb-4">
+                        Minha paixão por tecnologia me levou a expandir minhas competências para o desenvolvimento web, criando dashboards e ferramentas que otimizam processos e melhoram a visibilidade de dados.
+                    </p>
+                    <p class="font-semibold text-violet-300">
+                        Focado em resultados técnicos concretos, performance operacional e segurança de alto nível.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- ===== 4. Skills Técnicas (Visual impactante) ===== -->
+            <section id="skills" class="py-20">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Skills Técnicas</h2>
+                <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
+                    <!-- Coluna 1 -->
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-xl text-violet-400 mb-4">Firewall & VPN</h3>
+                        <div class="bg-gray-900 p-4 rounded-lg">MikroTik</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">pfSense</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">FortiGate</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">SonicWall</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">OpenVPN</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">WireGuard</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">IPSec</div>
+                    </div>
+                    <!-- Coluna 2 -->
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-xl text-violet-400 mb-4">Desenvolvimento</h3>
+                        <div class="bg-gray-900 p-4 rounded-lg">React</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Tailwind CSS</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Node.js</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Python</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Shell Script</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">APIs REST</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">PostgreSQL</div>
+                    </div>
+                    <!-- Coluna 3 -->
+                    <div class="space-y-4">
+                         <h3 class="font-bold text-xl text-violet-400 mb-4">Infra & Virtualização</h3>
+                        <div class="bg-gray-900 p-4 rounded-lg">VMware</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">NGINX</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">HAProxy</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Linux</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Git & GitHub</div>
+                         <div class="bg-gray-900 p-4 rounded-lg">Zabbix</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Grafana</div>
+                    </div>
+                    <!-- Coluna 4 -->
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-xl text-violet-400 mb-4">Certificações</h3>
+                        <div class="bg-gray-900 p-4 rounded-lg">MikroTik MTCRE</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">MikroTik MTCTCE</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Protocolo EIGRP</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Redes Ópticas (PON)</div>
+                        <div class="bg-gray-900 p-4 rounded-lg">Sub-Redes Ninja</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 5. Projetos em Destaque ===== -->
+            <section id="projetos" class="py-20">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Projetos em Destaque</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Projeto 1 -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=Dashboard+IPSec+Monitor" alt="[Imagem do Dashboard IPSec Monitor]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">Dashboard IPSec Monitor</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Ferramenta web para monitoramento em tempo real de túneis IPSec, exibindo status, tráfego e latência.</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Node.js</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">API MikroTik</span>
+                            </div>
+                            <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2 -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=OpenVPN+Log+Parser" alt="[Imagem do OpenVPN Log Parser]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">OpenVPN Log Parser</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Script de automação que analisa logs do OpenVPN, gera relatórios de conexão e alerta sobre falhas.</p>
+                             <div class="mb-4">
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Python</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Shell Script</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Regex</span>
+                            </div>
+                            <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3 -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=WireGuard+Debug+Tools" alt="[Imagem do WireGuard Debug Tools]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">WireGuard Debug Tools</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Conjunto de ferramentas para depurar e validar configurações de túneis WireGuard de forma rápida e eficiente.</p>
+                             <div class="mb-4">
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Go</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span>
+                                 <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">TailwindCSS</span>
+                            </div>
+                            <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ===== 7. Experiências Profissionais ===== -->
+            <section id="experiencia" class="py-20">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Experiência Profissional</h2>
+                <div class="max-w-4xl mx-auto space-y-12">
+                    <!-- Experiência 1 -->
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4 text-gray-400 font-medium">
+                            <p>OUT 2021 - PRESENTE</p>
+                            <p>Optidata</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold text-white">Analista de Redes e Segurança</h3>
+                            <ul class="mt-2 list-disc list-inside text-gray-300 space-y-1">
+                                <li>Implementação e gestão de mais de 50 VPNs (IPSec, OpenVPN, WireGuard).</li>
+                                <li>Criação de automações para provisionamento de firewalls, reduzindo o tempo de setup em 40%.</li>
+                                <li>Desenvolvimento de dashboards para monitoramento de links e serviços críticos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Experiência 2 -->
+                     <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4 text-gray-400 font-medium">
+                            <p>JAN 2020 - SET 2021</p>
+                            <p>Mhnet Telecom</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold text-white">Suporte Técnico N2</h3>
+                            <ul class="mt-2 list-disc list-inside text-gray-300 space-y-1">
+                                <li>Resolução avançada de incidentes de rede e conectividade.</li>
+                                <li>Configuração de equipamentos MikroTik e gerenciamento de redes ópticas (PON).</li>
+                                <li>Redução de 15% no volume de chamados recorrentes através da documentação de processos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ===== 10. Contato Estratégico ===== -->
+    <section id="contato" class="py-20 bg-gray-900">
+        <div class="max-w-3xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold gradient-text">Vamos conversar?</h2>
+            <p class="mt-4 text-lg text-gray-400">Estou disponível para novos desafios e projetos. Entre em contato para discutirmos como minhas habilidades podem agregar valor à sua empresa.</p>
+            
+            <div class="mt-8">
+                 <a href="mailto:nfl.leonardo@gmail.com" 
+                    class="inline-block bg-violet-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-violet-700 transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-violet-500/30">
+                    Entre em contato agora
+                 </a>
+            </div>
+
+            <div class="mt-12 flex justify-center space-x-6">
+                <a href="https://github.com/Marx1302" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors duration-300">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/leonardomarx/" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors duration-300">
+                     <span class="sr-only">LinkedIn</span>
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-center py-6">
+        <p class="text-gray-500">&copy; 2024 Leonardo Marx. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para Menu Mobile -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Fecha o menu ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+    </script>
+</body>
+</html>
