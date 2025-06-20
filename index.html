@@ -6,6 +6,9 @@
     <title>Leonardo Marx | Analista de Redes • Segurança • Automação</title>
     <meta name="description" content="Portfólio profissional de Leonardo Marx, especialista em infraestrutura de redes, segurança, automação e desenvolvimento web com foco em resultados.">
     
+    <!-- Favicon Personalizado -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -16,14 +19,12 @@
 
     <!-- Custom Styles & Config -->
     <style>
-        /* Define a fonte Inter como padrão */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a; /* Fundo principal um pouco mais escuro */
-            color: #E5E7EB; /* Cor de texto padrão (cinza claro) */
+            background-color: #0a0a0a;
+            color: #E5E7EB;
         }
 
-        /* Efeito de gradiente no texto */
         .gradient-text {
             background: linear-gradient(to right, #a78bfa, #818cf8);
             -webkit-background-clip: text;
@@ -32,7 +33,6 @@
             text-fill-color: transparent;
         }
         
-        /* Estilos para o fundo interativo */
         .hero-bg {
              position: relative;
              overflow: hidden;
@@ -52,8 +52,22 @@
             position: relative;
             z-index: 1;
         }
+
+        /* Efeito de digitação */
+        .typewriter-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1.5rem; /* Ajustar altura */
+            background-color: #a78bfa;
+            animation: blink 0.7s infinite;
+            margin-left: 4px;
+            vertical-align: middle;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
         
-        /* Estilos para animação de scroll */
         .scroll-animate {
             opacity: 0;
             transform: translateY(30px);
@@ -64,6 +78,27 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        .skill-card {
+            background-color: #111827; /* bg-gray-900 */
+            border: 1px solid #1f2937; /* Borda sutil */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-4px);
+            background-color: #1f2937;
+            border-color: #4c1d95;
+        }
+        .skill-card svg {
+            width: 24px;
+            height: 24px;
+        }
+
     </style>
 </head>
 <body class="antialiased">
@@ -72,20 +107,15 @@
     <header class="bg-black bg-opacity-80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Nome/Logo -->
                 <div class="flex-shrink-0">
                     <a href="#" class="text-2xl font-bold text-white">Leonardo Marx</a>
                 </div>
-
-                <!-- Menu Desktop -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#sobre" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Sobre Mim</a>
                     <a href="#skills" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Skills</a>
                     <a href="#projetos" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Projetos</a>
                     <a href="#contato" class="bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contato</a>
                 </nav>
-
-                <!-- Botão Menu Mobile -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -95,8 +125,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Menu Mobile (oculto por padrão) -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
                 <a href="#sobre" class="block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium">Sobre Mim</a>
@@ -109,28 +137,27 @@
 
     <main>
         <!-- ===== 2. Hero Section (Banner Visual) ===== -->
-        <section id="home" class="hero-bg pt-32 pb-20 text-center">
+        <section id="home" class="hero-bg pt-32 pb-20 text-center min-h-screen flex flex-col justify-center">
             <canvas id="interactive-bg"></canvas>
             <div class="hero-content max-w-4xl mx-auto px-4">
                 <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight gradient-text">
                     Leonardo Marx
                 </h1>
-                <p class="mt-4 text-xl md:text-2xl font-light text-gray-400">
-                    Analista de Redes • Segurança • Automação Web
+                <p class="mt-4 text-xl md:text-2xl font-light text-gray-400 h-8">
+                    <span id="typewriter"></span><span class="typewriter-cursor"></span>
                 </p>
                 <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
                     "Infraestrutura e Desenvolvimento que geram resultados."
                 </p>
-                <!-- Ícones Sociais -->
                 <div class="mt-8 flex justify-center space-x-6">
-                    <a href="https://github.com/seu-usuario" target="_blank" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                    <a href="https://github.com/Marx1302" target="_blank" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                     </a>
-                    <a href="https://linkedin.com/in/seu-usuario" target="_blank" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                    <a href="https://www.linkedin.com/in/leonardomarx/" target="_blank" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
                     </a>
-                    <a href="mailto:seu-email@dominio.com" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                    <a href="mailto:leonardo@marx.dev.br" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
                     </a>
                 </div>
             </div>
@@ -141,61 +168,27 @@
             <section id="sobre" class="py-20 scroll-animate">
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Sobre Mim</h2>
                 <div class="max-w-4xl mx-auto text-center text-lg leading-relaxed">
-                    <p class="mb-4">
-                        Sou um profissional focado em infraestrutura de redes e segurança, com sólida experiência em VPNs, firewalls (MikroTik, pfSense), virtualização com VMware e automação.
-                    </p>
-                    <p class="mb-4">
-                        Minha paixão por tecnologia me levou a expandir minhas competências para o desenvolvimento web, criando dashboards e ferramentas que otimizam processos e melhoram a visibilidade de dados.
-                    </p>
-                    <p class="font-semibold text-violet-300">
-                        Focado em resultados técnicos concretos, performance operacional e segurança de alto nível.
-                    </p>
+                    <p class="mb-4">Sou um profissional focado em infraestrutura de redes e segurança, com sólida experiência em VPNs, firewalls (MikroTik, pfSense), virtualização com VMware e automação.</p>
+                    <p class="mb-4">Minha paixão por tecnologia me levou a expandir minhas competências para o desenvolvimento web, criando dashboards e ferramentas que otimizam processos e melhoram a visibilidade de dados.</p>
+                    <p class="font-semibold text-violet-300">Focado em resultados técnicos concretos, performance operacional e segurança de alto nível.</p>
                 </div>
             </section>
             
             <!-- ===== 4. Skills Técnicas (Visual impactante) ===== -->
             <section id="skills" class="py-20 scroll-animate">
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Skills Técnicas</h2>
-                <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
-                    <!-- As colunas de skills permanecem as mesmas -->
-                    <div class="space-y-4">
-                        <h3 class="font-bold text-xl text-violet-400 mb-4">Firewall & VPN</h3>
-                        <div class="bg-gray-900 p-4 rounded-lg">MikroTik</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">pfSense</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">FortiGate</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">SonicWall</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">OpenVPN</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">WireGuard</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">IPSec</div>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="font-bold text-xl text-violet-400 mb-4">Desenvolvimento</h3>
-                        <div class="bg-gray-900 p-4 rounded-lg">React</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Tailwind CSS</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Node.js</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Python</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Shell Script</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">APIs REST</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">PostgreSQL</div>
-                    </div>
-                    <div class="space-y-4">
-                         <h3 class="font-bold text-xl text-violet-400 mb-4">Infra & Virtualização</h3>
-                        <div class="bg-gray-900 p-4 rounded-lg">VMware</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">NGINX</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">HAProxy</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Linux</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Git & GitHub</div>
-                         <div class="bg-gray-900 p-4 rounded-lg">Zabbix</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Grafana</div>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="font-bold text-xl text-violet-400 mb-4">Certificações</h3>
-                        <div class="bg-gray-900 p-4 rounded-lg">MikroTik MTCRE</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">MikroTik MTCTCE</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Protocolo EIGRP</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Redes Ópticas (PON)</div>
-                        <div class="bg-gray-900 p-4 rounded-lg">Sub-Redes Ninja</div>
-                    </div>
+                <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <!-- Tecnologias com logos -->
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-cyan-400"><title>React</title><path d="M12.001 2.002c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10s10-4.477 10-10c0-5.522-4.478-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.46-4.52c-.29.29-.76.29-1.05 0l-3.41-3.41-3.41 3.41c-.29.29-.76.29-1.05 0-.29-.29-.29-.76 0-1.05l3.41-3.41-3.41-3.41c-.29-.29-.29-.76 0-1.05s.76-.29 1.05 0l3.41 3.41 3.41-3.41c.29-.29.76-.29 1.05 0s.29.76 0 1.05l-3.41 3.41 3.41 3.41c.29.29.29.76 0 1.05z"/></svg><span>React</span></div>
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-cyan-400"><title>Tailwind CSS</title><path d="M12.001 2.002c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10s10-4.477 10-10c0-5.522-4.478-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.46-4.52c-.29.29-.76.29-1.05 0l-3.41-3.41-3.41 3.41c-.29.29-.76.29-1.05 0-.29-.29-.29-.76 0-1.05l3.41-3.41-3.41-3.41c-.29-.29-.29-.76 0-1.05s.76-.29 1.05 0l3.41 3.41 3.41-3.41c.29-.29.76-.29 1.05 0s.29.76 0 1.05l-3.41 3.41 3.41 3.41c.29.29.29.76 0 1.05z"/></svg><span>Tailwind CSS</span></div>
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-green-400"><title>Node.js</title><path d="M21.579,8.948h-3.054c-0.34,0-0.616,0.276-0.616,0.616v4.87c0,0.34,0.276,0.616,0.616,0.616h3.054c0.34,0,0.616-0.276,0.616-0.616v-4.87C22.195,9.224,21.919,8.948,21.579,8.948z M20.979,13.818h-1.833v-3.65h1.833V13.818zM17.309,8.948H2.396c-0.45,0-0.814,0.364-0.814,0.814v5.476c0,0.45,0.364,0.814,0.814,0.814h14.913c0.45,0,0.814-0.364,0.814-0.814V9.762C18.123,9.312,17.759,8.948,17.309,8.948z M16.913,14.63h-1.611v-3.23h1.611V14.63z M14.103,14.63h-1.611v-3.23h1.611V14.63z M11.293,14.63H9.682v-3.23h1.611V14.63z M8.483,14.63H6.872v-3.23h1.611V14.63z M5.673,14.63H4.062v-3.23h1.611V14.63z"/></svg><span>Node.js</span></div>
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-blue-400"><title>Python</title><path d="M23.12,9.92h-2.1c-0.35,0-0.64,0.29-0.64,0.64v3.88c0,0.35,0.29,0.64,0.64,0.64h2.1c0.35,0,0.64-0.29,0.64-0.64v-3.88C23.76,10.21,23.47,9.92,23.12,9.92z M22.48,13.8h-1.42v-2.56h1.42V13.8z M19.44,9.92H4.48c-0.49,0-0.88,0.39-0.88,0.88v4.4c0,0.49,0.39,0.88,0.88,0.88h14.96c0.49,0,0.88-0.39,0.88-0.88v-4.4C20.32,10.31,19.93,9.92,19.44,9.92z M18.96,14.56h-1.76v-2.88h1.76V14.56z M15.44,14.56h-1.76v-2.88h1.76V14.56z M11.92,14.56h-1.76v-2.88h1.76V14.56z M8.4,14.56H6.64v-2.88H8.4V14.56z M4.88,14.56H3.12v-2.88h1.76V14.56z"/></svg><span>Python</span></div>
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-red-500"><title>MikroTik</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8,8,3.59,8,8S16.41,20,12,20z M12,6c-3.31,0-6,2.69-6,6s2.69,6,6,6,6-2.69,6-6S15.31,6,12,6z M12,16c-2.21,0-4-1.79-4-4s1.79-4,4-4,4,1.79,4,4S14.21,16,12,16z"/></svg><span>MikroTik</span></div>
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-red-600"><title>pfSense</title><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg><span>pfSense</span></div>
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-blue-500"><title>VMware</title><path d="M21.94,5.66H2.06C1.14,5.66,0.4,6.4,0.4,7.32v9.36c0,0.92,0.74,1.66,1.66,1.66h19.88c0.92,0,1.66-0.74,1.66-1.66V7.32C23.6,6.4,22.86,5.66,21.94,5.66z M22,16.68c0,0.1-0.08,0.18-0.18,0.18H2.18C2.08,16.86,2,16.78,2,16.68V7.32C2,7.22,2.08,7.14,2.18,7.14h19.64c0.1,0,0.18,0.08,0.18,0.18V16.68z M5,14h2v-4H5V14z M8,14h2v-4H8V14z M11,14h2v-4h-2V14z M14,14h2v-4h-2V14z M17,14h2v-4h-2V14z"/></svg><span>VMware</span></div>
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-gray-300"><title>Linux</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8,8,3.59,8,8S16.41,20,12,20z M12,11.5c-0.83,0-1.5-0.67-1.5-1.5s0.67-1.5,1.5-1.5,1.5,0.67,1.5,1.5S12.83,11.5,12,11.5z M12,14.5c2.21,0,4-1.79,4-4s-1.79-4-4-4-4,1.79-4,4S9.79,14.5,12,14.5z"/></svg><span>Linux</span></div>
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-orange-500"><title>Git</title><path d="M21.1,10.9l-8.2,8.2c-0.4,0.4-1,0.4-1.4,0L3.3,11.3c-0.4-0.4-0.4-1,0-1.4l8.2-8.2c0.4-0.4,1-0.4,1.4,0l8.2,8.2C21.5,9.9,21.5,10.5,21.1,10.9z M12,14L6,8l6-6,6,6L12,14z"/></svg><span>Git</span></div>
+                    <div class="skill-card"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-green-500"><title>NGINX</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M16.5,15.5H7.5V8.5h9V15.5z M15,10h-6v4h6V10z"/></svg><span>NGINX</span></div>
                 </div>
             </section>
 
@@ -203,48 +196,30 @@
             <section id="projetos" class="py-20 scroll-animate">
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Projetos em Destaque</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Projeto 1 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
                         <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=Dashboard+IPSec+Monitor" alt="[Imagem do Dashboard IPSec Monitor]" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2 text-white">Dashboard IPSec Monitor</h3>
                             <p class="text-gray-400 mb-4 text-sm">Ferramenta web para monitoramento em tempo real de túneis IPSec, exibindo status, tráfego e latência.</p>
-                            <div class="mb-4">
-                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span>
-                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Node.js</span>
-                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">API MikroTik</span>
-                            </div>
+                            <div class="mb-4"><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Node.js</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">API MikroTik</span></div>
                             <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
                         </div>
                     </div>
-
-                    <!-- Projeto 2 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
                         <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=OpenVPN+Log+Parser" alt="[Imagem do OpenVPN Log Parser]" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2 text-white">OpenVPN Log Parser</h3>
                             <p class="text-gray-400 mb-4 text-sm">Script de automação que analisa logs do OpenVPN, gera relatórios de conexão e alerta sobre falhas.</p>
-                             <div class="mb-4">
-                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Python</span>
-                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Shell Script</span>
-                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Regex</span>
-                            </div>
+                             <div class="mb-4"><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Python</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Shell Script</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Regex</span></div>
                             <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
                         </div>
                     </div>
-
-                    <!-- Projeto 3 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
                         <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=WireGuard+Debug+Tools" alt="[Imagem do WireGuard Debug Tools]" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2 text-white">WireGuard Debug Tools</h3>
                             <p class="text-gray-400 mb-4 text-sm">Conjunto de ferramentas para depurar e validar configurações de túneis WireGuard de forma rápida e eficiente.</p>
-                             <div class="mb-4">
-                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Go</span>
-                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span>
-                                 <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">TailwindCSS</span>
-                            </div>
+                             <div class="mb-4"><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Go</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">TailwindCSS</span></div>
                             <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
                         </div>
                     </div>
@@ -255,39 +230,16 @@
             <section id="experiencia" class="py-20 scroll-animate">
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Experiência Profissional</h2>
                 <div class="max-w-4xl mx-auto space-y-12">
-                    <!-- Experiência 1 -->
                     <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/4 text-gray-400 font-medium">
-                            <p>OUT 2021 - PRESENTE</p>
-                            <p>Optidata</p>
-                        </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-xl font-bold text-white">Analista de Redes e Segurança</h3>
-                            <ul class="mt-2 list-disc list-inside text-gray-300 space-y-1">
-                                <li>Implementação e gestão de mais de 50 VPNs (IPSec, OpenVPN, WireGuard).</li>
-                                <li>Criação de automações para provisionamento de firewalls, reduzindo o tempo de setup em 40%.</li>
-                                <li>Desenvolvimento de dashboards para monitoramento de links e serviços críticos.</li>
-                            </ul>
-                        </div>
+                        <div class="md:w-1/4 text-gray-400 font-medium"><p>OUT 2021 - PRESENTE</p><p>Optidata</p></div>
+                        <div class="md:w-3/4"><h3 class="text-xl font-bold text-white">Analista de Redes e Segurança</h3><ul class="mt-2 list-disc list-inside text-gray-300 space-y-1"><li>Implementação e gestão de mais de 50 VPNs (IPSec, OpenVPN, WireGuard).</li><li>Criação de automações para provisionamento de firewalls, reduzindo o tempo de setup em 40%.</li><li>Desenvolvimento de dashboards para monitoramento de links e serviços críticos.</li></ul></div>
                     </div>
-                    <!-- Experiência 2 -->
                      <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/4 text-gray-400 font-medium">
-                            <p>JAN 2020 - SET 2021</p>
-                            <p>Mhnet Telecom</p>
-                        </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-xl font-bold text-white">Suporte Técnico N2</h3>
-                            <ul class="mt-2 list-disc list-inside text-gray-300 space-y-1">
-                                <li>Resolução avançada de incidentes de rede e conectividade.</li>
-                                <li>Configuração de equipamentos MikroTik e gerenciamento de redes ópticas (PON).</li>
-                                <li>Redução de 15% no volume de chamados recorrentes através da documentação de processos.</li>
-                            </ul>
-                        </div>
+                        <div class="md:w-1/4 text-gray-400 font-medium"><p>JAN 2020 - SET 2021</p><p>Mhnet Telecom</p></div>
+                        <div class="md:w-3/4"><h3 class="text-xl font-bold text-white">Suporte Técnico N2</h3><ul class="mt-2 list-disc list-inside text-gray-300 space-y-1"><li>Resolução avançada de incidentes de rede e conectividade.</li><li>Configuração de equipamentos MikroTik e gerenciamento de redes ópticas (PON).</li><li>Redução de 15% no volume de chamados recorrentes através da documentação de processos.</li></ul></div>
                     </div>
                 </div>
             </section>
-
         </div>
     </main>
 
@@ -296,23 +248,12 @@
         <div class="max-w-3xl mx-auto text-center px-4 scroll-animate">
             <h2 class="text-3xl font-bold gradient-text">Vamos conversar?</h2>
             <p class="mt-4 text-lg text-gray-400">Estou disponível para novos desafios e projetos. Entre em contato para discutirmos como minhas habilidades podem agregar valor à sua empresa.</p>
-            
             <div class="mt-8">
-                 <a href="mailto:seu-email@dominio.com" 
-                    class="inline-block bg-violet-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-violet-700 transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-violet-500/30">
-                    Entre em contato agora
-                 </a>
+                 <a href="mailto:leonardo@marx.dev.br" class="inline-block bg-violet-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-violet-700 transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-violet-500/30">Entre em contato agora</a>
             </div>
-
             <div class="mt-12 flex justify-center space-x-6">
-                <a href="https://github.com/seu-usuario" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors duration-300">
-                    <span class="sr-only">GitHub</span>
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
-                </a>
-                <a href="https://linkedin.com/in/seu-usuario" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors duration-300">
-                     <span class="sr-only">LinkedIn</span>
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-                </a>
+                <a href="https://github.com/Marx1302" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors duration-300"><span class="sr-only">GitHub</span><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg></a>
+                <a href="https://www.linkedin.com/in/leonardomarx/" target="_blank" class="text-gray-400 hover:text-violet-400 transition-colors duration-300"><span class="sr-only">LinkedIn</span><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg></a>
             </div>
         </div>
     </section>
@@ -326,124 +267,65 @@
         // --- Script para Menu Mobile ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+        // --- Script para Efeito de Digitação ---
+        const typewriterElement = document.getElementById('typewriter');
+        const textToType = "Analista de Redes • Segurança • Automação Web";
+        let charIndex = 0;
+        function type() {
+            if (charIndex < textToType.length) {
+                typewriterElement.textContent += textToType.charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 70);
+            }
+        }
 
         // --- Script para Fundo Interativo (Canvas) ---
         const canvas = document.getElementById('interactive-bg');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        
         function resizeCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = document.getElementById('home').offsetHeight;
         }
-
         class Particle {
-            constructor(x, y, vx, vy) {
-                this.x = x;
-                this.y = y;
-                this.vx = vx;
-                this.vy = vy;
-                this.radius = Math.random() * 1.5 + 0.5;
-            }
-
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-
-                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(167, 139, 250, 0.5)'; // Cor violeta sutil
-                ctx.fill();
-            }
+            constructor(x, y, vx, vy) { this.x = x; this.y = y; this.vx = vx; this.vy = vy; this.radius = Math.random() * 1.5 + 0.5; }
+            update() { this.x += this.vx; this.y += this.vy; if (this.x < 0 || this.x > canvas.width) this.vx *= -1; if (this.y < 0 || this.y > canvas.height) this.vy *= -1; }
+            draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2); ctx.fillStyle = 'rgba(167, 139, 250, 0.5)'; ctx.fill(); }
         }
-
         function initParticles() {
-            particles = [];
-            let numberOfParticles = (canvas.width * canvas.height) / 9000;
+            particles = []; let numberOfParticles = (canvas.width * canvas.height) / 9000;
             for (let i = 0; i < numberOfParticles; i++) {
-                let x = Math.random() * canvas.width;
-                let y = Math.random() * canvas.height;
-                let vx = (Math.random() - 0.5) * 0.5;
-                let vy = (Math.random() - 0.5) * 0.5;
-                particles.push(new Particle(x, y, vx, vy));
+                particles.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height, (Math.random() - 0.5) * 0.5, (Math.random() - 0.5) * 0.5));
             }
         }
-
         function connectParticles() {
             for (let a = 0; a < particles.length; a++) {
                 for (let b = a; b < particles.length; b++) {
-                    let distance = Math.sqrt(
-                        Math.pow(particles[a].x - particles[b].x, 2) +
-                        Math.pow(particles[a].y - particles[b].y, 2)
-                    );
-
-                    if (distance < 120) {
-                        ctx.strokeStyle = `rgba(139, 92, 246, ${1 - distance / 120})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[a].x, particles[a].y);
-                        ctx.lineTo(particles[b].x, particles[b].y);
-                        ctx.stroke();
-                    }
+                    let distance = Math.sqrt(Math.pow(particles[a].x - particles[b].x, 2) + Math.pow(particles[a].y - particles[b].y, 2));
+                    if (distance < 120) { ctx.strokeStyle = `rgba(139, 92, 246, ${1 - distance / 120})`; ctx.lineWidth = 0.5; ctx.beginPath(); ctx.moveTo(particles[a].x, particles[a].y); ctx.lineTo(particles[b].x, particles[b].y); ctx.stroke(); }
                 }
             }
         }
+        function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => { p.update(); p.draw(); }); connectParticles(); requestAnimationFrame(animate); }
+        
+        // --- Script para Animação de Scroll ---
+        const animatedElements = document.querySelectorAll('.scroll-animate');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
+        }, { threshold: 0.1 });
+        animatedElements.forEach(element => observer.observe(element));
 
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            connectParticles();
-            requestAnimationFrame(animate);
-        }
-
+        // Iniciar tudo no load
         window.addEventListener('load', () => {
             resizeCanvas();
             initParticles();
             animate();
+            setTimeout(type, 500); // Inicia a digitação após um pequeno delay
         });
-
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            initParticles();
-        });
-
-
-        // --- Script para Animação de Scroll (Intersection Observer) ---
-        const animatedElements = document.querySelectorAll('.scroll-animate');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1 // A animação começa quando 10% do elemento está visível
-        });
-
-        animatedElements.forEach(element => {
-            observer.observe(element);
-        });
+        window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
 
     </script>
 </body>
