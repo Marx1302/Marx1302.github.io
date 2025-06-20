@@ -16,7 +16,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Marx1302">
+    <meta property="og:title" content="Leonardo Marx | Analista de Redes, Segurança & Automação">
+    <meta property="og:description" content="Portfólio de Leonardo Marx – Infraestrutura, segurança, automação e desenvolvimento web com excelência técnica.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/21274305?v=4">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leonardo Marx | Analista de Redes, Segurança & Automação">
+    <meta name="twitter:description" content="Portfólio de Leonardo Marx – Infraestrutura, segurança, automação e desenvolvimento web com excelência técnica.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/21274305?v=4">
     <!-- Custom Styles & Config -->
     <style>
         body {
@@ -49,10 +59,14 @@
         }
 
         .hero-content {
-            position: relative;
-            z-index: 1;
+             opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 1.2s cubic-bezier(.6,.3,0,1), transform 1.2s cubic-bezier(.6,.3,0,1);
         }
-
+        .hero-content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
         .typewriter-cursor {
             display: inline-block;
             width: 3px;
