@@ -3,121 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo Marx | Analista de Redes • Segurança • Automação</title>
-    <meta name="description" content="Portfólio profissional de Leonardo Marx, especialista em infraestrutura de redes, segurança, automação e desenvolvimento web com foco em resultados.">
+    <title>Leonardo Marx | Engenheiro de Redes & Cloud • Automação</title>
+    <meta name="description" content="Portfólio de Leonardo Marx, Engenheiro de Redes e Cloud especializado em segurança, automação com Python e desenvolvimento de soluções de infraestrutura de alto impacto.">
     
-    <!-- Favicon Personalizado -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Open Graph -->
+    
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://github.com/Marx1302">
-    <meta property="og:title" content="Leonardo Marx | Analista de Redes, Segurança & Automação">
-    <meta property="og:description" content="Portfólio de Leonardo Marx – Infraestrutura, segurança, automação e desenvolvimento web com excelência técnica.">
+    <meta property="og:title" content="Leonardo Marx | Engenheiro de Redes & Cloud • Automação">
+    <meta property="og:description" content="Portfólio de Leonardo Marx – Conheça projetos em segurança, automação e infraestrutura de rede.">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/21274305?v=4">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Leonardo Marx | Analista de Redes, Segurança & Automação">
-    <meta name="twitter:description" content="Portfólio de Leonardo Marx – Infraestrutura, segurança, automação e desenvolvimento web com excelência técnica.">
+    <meta name="twitter:title" content="Leonardo Marx | Engenheiro de Redes & Cloud • Automação">
+    <meta name="twitter:description" content="Portfólio de Leonardo Marx – Conheça projetos em segurança, automação e infraestrutura de rede.">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/21274305?v=4">
-    <!-- Custom Styles & Config -->
+    
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #E5E7EB;
-        }
-
-        .gradient-text {
-            background: linear-gradient(to right, #a78bfa, #818cf8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .hero-bg {
-             position: relative;
-             overflow: hidden;
-             background-color: #0a0a0a;
-        }
-
-        #interactive-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .hero-content {
-             opacity: 0;
-            transform: translateY(60px);
-            transition: opacity 1.2s cubic-bezier(.6,.3,0,1), transform 1.2s cubic-bezier(.6,.3,0,1);
-        }
-        .hero-content.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .typewriter-cursor {
-            display: inline-block;
-            width: 3px;
-            height: 1.5rem;
-            background-color: #a78bfa;
-            animation: blink 0.7s infinite;
-            margin-left: 4px;
-            vertical-align: middle;
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        
-        .scroll-animate {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .scroll-animate.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .skill-card {
-            background-color: #111827;
-            border: 1px solid #1f2937;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: all 0.3s ease;
-        }
-        .skill-card:hover {
-            transform: translateY(-4px);
-            background-color: #1f2937;
-            border-color: #4c1d95;
-        }
-        .skill-card svg {
-            width: 24px;
-            height: 24px;
-            flex-shrink: 0;
-        }
-
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #E5E7EB; }
+        .gradient-text { background: linear-gradient(to right, #a78bfa, #818cf8); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+        .hero-bg { position: relative; overflow: hidden; background-color: #0a0a0a; }
+        #interactive-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hero-content { opacity: 0; transform: translateY(60px); transition: opacity 1.2s cubic-bezier(.6,.3,0,1), transform 1.2s cubic-bezier(.6,.3,0,1); }
+        .hero-content.visible { opacity: 1; transform: translateY(0); }
+        .typewriter-cursor { display: inline-block; width: 3px; height: 1.5rem; background-color: #a78bfa; animation: blink 0.7s infinite; margin-left: 4px; vertical-align: middle; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .scroll-animate { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .scroll-animate.is-visible { opacity: 1; transform: translateY(0); }
+        .skill-card { background-color: #111827; border: 1px solid #1f2937; padding: 1rem; border-radius: 0.5rem; display: flex; align-items: center; gap: 0.75rem; transition: all 0.3s ease; }
+        .skill-card:hover { transform: translateY(-4px); background-color: #1f2937; border-color: #4c1d95; }
+        .skill-card svg { width: 24px; height: 24px; flex-shrink: 0; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- ===== 1. Header (Cabeçalho Principal) ===== -->
     <header class="bg-black bg-opacity-80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -127,7 +52,8 @@
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#skills" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Skills</a>
                     <a href="#projetos" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Projetos</a>
-                    <a href="#sobre" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Sobre Mim</a>
+                    <a href="#experiencia" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Experiência</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-violet-400 transition-colors duration-300">Sobre</a>
                     <a href="#contato" class="bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contato</a>
                 </nav>
                 <div class="md:hidden">
@@ -141,17 +67,17 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
                 <a href="#skills" class="block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium">Skills</a>
                 <a href="#projetos" class="block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium">Projetos</a>
-                <a href="#sobre" class="block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium">Sobre Mim</a>
+                <a href="#experiencia" class="block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium">Experiência</a>
+                <a href="#sobre" class="block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium">Sobre</a>
                 <a href="#contato" class="block bg-violet-600 text-white rounded-md px-3 py-3 text-base font-medium mt-2">Contato</a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- ===== 2. Hero Section (Banner Visual) ===== -->
         <section id="home" class="hero-bg pt-32 pb-20 text-center min-h-screen flex flex-col justify-center">
             <canvas id="interactive-bg"></canvas>
-            <div class="hero-content max-w-4xl mx-auto px-4">
+            <div class="hero-content max-w-4xl mx-auto px-4 z-10">
                 <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight gradient-text">
                     Leonardo Marx
                 </h1>
@@ -159,40 +85,32 @@
                     <span id="typewriter"></span><span class="typewriter-cursor"></span>
                 </p>
                 <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
-                    "Infraestrutura e Desenvolvimento que geram resultados."
+                    Construindo infraestruturas de rede seguras, inteligentes e automatizadas.
                 </p>
-                <div class="mt-8 flex justify-center space-x-6">
-                    <a href="https://github.com/Marx1302" target="_blank" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="#projetos" class="bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
+                        Ver Meus Projetos
                     </a>
-                    <a href="https://www.linkedin.com/in/leonardomarx/" target="_blank" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-                    </a>
-                    <a href="https://wa.me/5549988701809" target="_blank" class="text-gray-400 hover:text-green-400 transition-colors duration-300 hover:scale-110">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51s-.371-.012-.57-.012c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.078 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    </a>
-                    <a href="mailto:nfl.leonardo@gmail.com" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                    <a href="https://www.linkedin.com/in/leonardomarx/" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
+                        Conectar no LinkedIn
                     </a>
                 </div>
             </div>
         </section>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- ===== 4. Skills Técnicas (Visual impactante) ===== -->
+            
             <section id="skills" class="py-20 scroll-animate">
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Principais Competências</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Coluna 1: Redes & Segurança -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="space-y-4">
                         <h3 class="font-bold text-xl text-violet-400 mb-4 text-center">Redes & Segurança</h3>
-                        <div class="skill-card"><svg class="text-red-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>MikroTik</title><path d="M0 16.27v-8.4L12.01 2l12.02 5.86v8.4L12.01 22Zm12.01-1.84 8.12-3.95v-4.9L12.01 4.1 3.89 7.58v4.9l8.12 3.95ZM8.56 9.68h6.9v1.6H8.57Zm0 3.23h6.9v1.6H8.57Z"/></svg><span>MikroTik (MTCRE, MTCTCE)</span></div>
-                        <div class="skill-card"><svg class="text-red-600" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>pfSense</title><path d="M12.005 2.001C5.643 1.99 1.37 5.823.854 11.085l-.06.602 1.34 5.39.06.25c.523 5.23 4.793 9.04 10.15 9.04h.3c5.522 0 10-4.477 10-10s-4.478-10-10-10h-.638Zm-.005 1.5c4.704 0 8.5 3.797 8.5 8.501 0 4.703-3.796 8.5-8.5 8.5-4.48 0-8.23-3.455-8.48-7.892l-1.02-4.113c.04-4.524 4.14-8.003 8.48-8.003l.02.007Z"/></svg><span>pfSense</span></div>
-                        <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-300"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.602-3.751m-.228-1.12A12.023 12.023 0 0018 5.25c-2.348-.574-4.833-.574-7.18 0z" /></svg><span>Firewalls (FortiGate, SonicWall)</span></div>
+                        <div class="skill-card"><svg class="text-red-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>MikroTik</title><path d="M0 16.27v-8.4L12.01 2l12.02 5.86v8.4L12.01 22Zm12.01-1.84 8.12-3.95v-4.9L12.01 4.1 3.89 7.58v4.9l8.12 3.95ZM8.56 9.68h6.9v1.6H8.57Zm0 3.23h6.9v1.6H8.57Z"/></svg><span>MikroTik (MTCNA, MTCRE, MTCTCE)</span></div>
+                        <div class="skill-card"><svg class="text-red-600" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>pfSense</title><path d="M12.005 2.001C5.643 1.99 1.37 5.823.854 11.085l-.06.602 1.34 5.39.06.25c.523 5.23 4.793 9.04 10.15 9.04h.3c5.522 0 10-4.477 10-10s-4.478-10-10-10h-.638Zm-.005 1.5c4.704 0 8.5 3.797 8.5 8.501 0 4.703-3.796 8.5-8.5 8.5-4.48 0-8.23-3.455-8.48-7.892l-1.02-4.113c.04-4.524 4.14-8.003 8.48-8.003l.02.007Z"/></svg><span>pfSense & OPNsense</span></div>
+                        <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-gray-300"><path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0L3.32 9.343a.75.75 0 000 1.032l8.164 7.173a.75.75 0 001.032 0l8.164-7.173a.75.75 0 000-1.032L12.516 2.17zM11.625 9a.375.375 0 11.75 0 .375.375 0 01-.75 0zM12 11.25a.75.75 0 100 1.5.75.75 0 000-1.5z" clip-rule="evenodd" /></svg><span>Cisco (CCNA em progresso)</span></div>
+                        <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-300"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.602-3.751m-.228-1.12A12.023 12.023 0 0018 5.25c-2.348-.574-4.833-.574-7.18 0z" /></svg><span>Honeypots & Threat Intelligence</span></div>
                         <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-300"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h16.5a1.5 1.5 0 001.5-1.5v-6a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v6a1.5 1.5 0 001.5 1.5z" /></svg><span>VPNs (IPSec, OpenVPN, WireGuard)</span></div>
-                        <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-300"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3.75H19.5M8.25 6.75H19.5M8.25 9.75H19.5M8.25 12.75H19.5m-15-8.25v15l-3-3m3 3l3-3m-3 3H3.75" /></svg><span>Redes Ópticas (PON) & EIGRP</span></div>
                     </div>
-                    <!-- Coluna 2: Desenvolvimento & Automação -->
                     <div class="space-y-4">
                         <h3 class="font-bold text-xl text-violet-400 mb-4 text-center">Desenvolvimento & Automação</h3>
                         <div class="skill-card"><svg class="text-blue-400" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Python</title><path d="M23.12,9.92h-2.1c-0.35,0-0.64,0.29-0.64,0.64v3.88c0,0.35,0.29,0.64,0.64,0.64h2.1c0.35,0,0.64-0.29,0.64-0.64v-3.88C23.76,10.21,23.47,9.92,23.12,9.92z M22.48,13.8h-1.42v-2.56h1.42V13.8z M19.44,9.92H4.48c-0.49,0-0.88,0.39-0.88,0.88v4.4c0,0.49,0.39,0.88,0.88,0.88h14.96c0.49,0,0.88-0.39,0.88-0.88v-4.4C20.32,10.31,19.93,9.92,19.44,9.92z M18.96,14.56h-1.76v-2.88h1.76V14.56z M15.44,14.56h-1.76v-2.88h1.76V14.56z M11.92,14.56h-1.76v-2.88h1.76V14.56z M8.4,14.56H6.64v-2.88H8.4V14.56z M4.88,14.56H3.12v-2.88h1.76V14.56z"/></svg><span>Python</span></div>
@@ -201,11 +119,10 @@
                         <div class="skill-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-300"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg><span>Shell Script & APIs REST</span></div>
                         <div class="skill-card"><svg class="text-cyan-400" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Tailwind CSS</title><path d="M12.001 2.002c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10s10-4.477 10-10c0-5.522-4.478-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.46-4.52c-.29.29-.76.29-1.05 0l-3.41-3.41-3.41 3.41c-.29.29-.76.29-1.05 0-.29-.29-.29-.76 0-1.05l3.41-3.41-3.41-3.41c-.29-.29-.29-.76 0-1.05s.76-.29 1.05 0l3.41 3.41 3.41-3.41c.29-.29.76-.29 1.05 0s.29.76 0 1.05l-3.41 3.41 3.41 3.41c.29.29.29.76 0 1.05z"/></svg><span>Tailwind CSS</span></div>
                     </div>
-                    <!-- Coluna 3: Infra & DevOps -->
                     <div class="space-y-4">
                         <h3 class="font-bold text-xl text-violet-400 mb-4 text-center">Infraestrutura & DevOps</h3>
                         <div class="skill-card"><svg class="text-blue-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>VMware</title><path d="M21.94,5.66H2.06C1.14,5.66,0.4,6.4,0.4,7.32v9.36c0,0.92,0.74,1.66,1.66,1.66h19.88c0.92,0,1.66-0.74,1.66-1.66V7.32C23.6,6.4,22.86,5.66,21.94,5.66z M22,16.68c0,0.1-0.08,0.18-0.18,0.18H2.18C2.08,16.86,2,16.78,2,16.68V7.32C2,7.22,2.08,7.14,2.18,7.14h19.64c0.1,0,0.18,0.08,0.18,0.18V16.68z M5,14h2v-4H5V14z M8,14h2v-4H8V14z M11,14h2v-4h-2V14z M14,14h2v-4h-2V14z M17,14h2v-4h-2V14z"/></svg><span>VMware</span></div>
-                        <div class="skill-card"><svg class="text-gray-300" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Linux</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8,8,3.59,8,8S16.41,20,12,20z M12,11.5c-0.83,0-1.5-0.67-1.5-1.5s0.67-1.5,1.5-1.5,1.5,0.67,1.5,1.5S12.83,11.5,12,11.5z M12,14.5c2.21,0,4-1.79-4-4s-1.79-4-4-4-4,1.79-4,4S9.79,14.5,12,14.5z"/></svg><span>Linux</span></div>
+                        <div class="skill-card"><svg class="text-gray-300" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Linux</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8,8,3.59,8,8S16.41,20,12,20z M12,11.5c-0.83,0-1.5-0.67-1.5-1.5s0.67-1.5,1.5-1.5,1.5,0.67,1.5,1.5S12.83,11.5,12,11.5z M12,14.5c2.21,0,4-1.79-4-4s-1.79-4-4-4-4,1.79-4,4S9.79,14.5,12,14.5z"/></svg><span>Linux (Debian, CentOS)</span></div>
                         <div class="skill-card"><svg class="text-blue-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Docker</title><path d="M22.992 6.332c-.528 0-1.056.02-1.583.058l-2.454.116-2.433.116-2.414.116-2.413.115-2.394.116-2.393.116L4.514 7.205l-1.58.077c-.528.025-1.056.05-1.584.076L0 7.49v7.02l1.348-.135c.528-.054 1.056-.107 1.584-.16L4.514 14.1l2.393-.116 2.394-.116 2.413-.115 2.414-.116 2.433-.116 2.454-.116 1.583-.058c.527-.02 1.055-.038 1.583-.058V6.332zM7.05 10.458H4.675v2.373H7.05v-2.373zm2.597 0H7.272v2.373h2.374v-2.373zm2.598 0H9.87v2.373h2.374v-2.373zm2.597 0h-2.373v2.373h2.373v-2.373zm-5.195-2.597H4.675v2.373H7.05v-2.373zm2.597 0H7.272v2.373h2.374v-2.373zm2.598 0H9.87v2.373h2.374v-2.373zm2.597 0h-2.373v2.373h2.373v-2.373zm-2.597-2.598h-2.374v2.374h2.374v-2.374zM16.92 1.348A3.33 3.33 0 0 0 13.59.02a.84.84 0 0 0-.21.018A3.2 3.2 0 0 0 11.007.02a.84.84 0 0 0-.21-.018A3.33 3.33 0 0 0 7.466 1.348a3.19 3.19 0 0 0-1.26 2.413l.057.296h1.776l-.037-.218a1.32 1.32 0 0 1 .5-.96.93.93 0 0 1 .63-.217c.277 0 .553.095.553.475v.218h2.393v-.218c0-.38.276-.475.553-.475a.93.93 0 0 1 .63.218c.276.275.462.63.5.96l-.036.217h1.776l.057-.296A3.19 3.19 0 0 0 16.92 1.347z"/></svg><span>Docker</span></div>
                         <div class="skill-card"><svg class="text-green-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>NGINX</title><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2z M16.5,15.5H7.5V8.5h9V15.5z M15,10h-6v4h6V10z"/></svg><span>NGINX & HAProxy</span></div>
                         <div class="skill-card"><svg class="text-orange-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Git</title><path d="M21.1,10.9l-8.2,8.2c-0.4,0.4-1,0.4-1.4,0L3.3,11.3c-0.4-0.4-0.4-1,0-1.4l8.2-8.2c0.4-0.4,1-0.4,1.4,0l8.2,8.2C21.5,9.9,21.5,10.5,21.1,10.9z M12,14L6,8l6-6,6,6L12,14z"/></svg><span>Git & GitHub</span></div>
@@ -213,68 +130,100 @@
                 </div>
             </section>
             
-            <!-- ===== 5. Projetos em Destaque ===== -->
             <section id="projetos" class="py-20 scroll-animate">
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Projetos em Destaque</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
                     <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
-                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=Dashboard+IPSec+Monitor" alt="Imagem do Dashboard IPSec Monitor" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=Honeypot+e+Threat+Intel" alt="Diagrama do sistema de Honeypot e Blacklist Dinâmica" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-white">Dashboard IPSec Monitor</h3>
-                            <p class="text-gray-400 mb-4 text-sm">Ferramenta web para monitoramento em tempo real de túneis IPSec, exibindo status, tráfego e latência.</p>
-                            <div class="mb-4"><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Node.js</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">API MikroTik</span></div>
-                            <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
+                            <h3 class="text-xl font-bold mb-2 text-white">Sistema de Threat Intelligence com Honeypot</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Arquitetura de segurança proativa que captura IPs maliciosos, os processa e distribui regras de bloqueio para todos os firewalls da infraestrutura.</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">MikroTik</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Segurança</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Regex</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">API</span>
+                            </div>
+                            <a href="https://github.com/Marx1302" target="_blank" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver detalhes &rarr;</a>
                         </div>
                     </div>
+
                     <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
-                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=OpenVPN+Log+Parser" alt="Imagem do OpenVPN Log Parser" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=Automação+de+VPN" alt="Fluxograma da automação de provisionamento de VPN" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-white">OpenVPN Log Parser</h3>
-                            <p class="text-gray-400 mb-4 text-sm">Script de automação que analisa logs do OpenVPN, gera relatórios de conexão e alerta sobre falhas.</p>
-                             <div class="mb-4"><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Python</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Shell Script</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Regex</span></div>
-                            <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
+                            <h3 class="text-xl font-bold mb-2 text-white">Automação de Provisionamento OpenVPN</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Solução completa que automatiza a criação de usuários e certificados VPN no pfSense, reduzindo o tempo de provisionamento de minutos para segundos.</p>
+                            <div class="mb-4">
+                               <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Shell Script</span>
+                               <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">pfSense</span>
+                               <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Automação</span>
+                            </div>
+                            <a href="https://github.com/Marx1302" target="_blank" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver detalhes &rarr;</a>
                         </div>
                     </div>
+
                     <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
-                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=WireGuard+Debug+Tools" alt="Imagem do WireGuard Debug Tools" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=Dashboard+IPSec" alt="Screenshot do Dashboard de monitoramento IPSec" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-white">WireGuard Debug Tools</h3>
-                            <p class="text-gray-400 mb-4 text-sm">Conjunto de ferramentas para depurar e validar configurações de túneis WireGuard de forma rápida e eficiente.</p>
-                             <div class="mb-4"><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Go</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span><span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">TailwindCSS</span></div>
-                            <a href="#" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver no GitHub &rarr;</a>
+                            <h3 class="text-xl font-bold mb-2 text-white">Dashboard de Monitoramento IPSec</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Dashboard full-stack para monitoramento em tempo real do status, tráfego e latência de túneis VPN IPSec, melhorando a visibilidade e a resposta a falhas.</p>
+                             <div class="mb-4">
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Node.js</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Full-Stack</span>
+                            </div>
+                            <a href="https://github.com/Marx1302" target="_blank" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver detalhes &rarr;</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- ===== 3. Seção "Sobre Mim" (About) ===== -->
-            <section id="sobre" class="py-20 scroll-animate">
-                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Sobre Mim</h2>
-                <div class="max-w-4xl mx-auto text-center text-lg leading-relaxed">
-                    <p class="mb-4">Sou um profissional focado em infraestrutura de redes e segurança, com sólida experiência em VPNs, firewalls (MikroTik, pfSense), virtualização com VMware e automação.</p>
-                    <p class="mb-4">Minha paixão por tecnologia me levou a expandir minhas competências para o desenvolvimento web, criando dashboards e ferramentas que otimizam processos e melhoram a visibilidade de dados.</p>
-                    <p class="font-semibold text-violet-300">Focado em resultados técnicos concretos, performance operacional e segurança de alto nível.</p>
-                </div>
-            </section>
-            
-            <!-- ===== 7. Experiências Profissionais ===== -->
             <section id="experiencia" class="py-20 scroll-animate">
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Experiência Profissional</h2>
                 <div class="max-w-4xl mx-auto space-y-12">
+                    
                     <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/4 text-gray-400 font-medium"><p>OUT 2021 - PRESENTE</p><p>Optidata</p></div>
-                        <div class="md:w-3/4"><h3 class="text-xl font-bold text-white">Analista de Redes e Segurança</h3><ul class="mt-2 list-disc list-inside text-gray-300 space-y-1"><li>Implementação e gestão de mais de 50 VPNs (IPSec, OpenVPN, WireGuard).</li><li>Criação de automações para provisionamento de firewalls, reduzindo o tempo de setup em 40%.</li><li>Desenvolvimento de dashboards para monitoramento de links e serviços críticos.</li></ul></div>
+                        <div class="md:w-1/4 text-gray-400 font-medium"><p>FEV 2023 - PRESENTE</p><p>Optidata</p></div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold text-white">Technical Network Analyst</h3>
+                            <p class="mt-2 text-gray-300 text-sm md:text-base">Atuo como ponto focal técnico para a segurança e otimização de infraestruturas de rede em ambientes de cloud privada, projetando e gerenciando soluções para garantir máxima performance e disponibilidade.</p>
+                            <ul class="mt-4 list-disc list-inside text-gray-300 space-y-2">
+                                <li>**Segurança Proativa:** Arquitetura de um sistema de Threat Intelligence com honeypots em MikroTik e integração de blocklists (SERPRO, Spamhaus) para automatizar a resposta a ameaças em toda a infraestrutura.</li>
+                                <li>**Automação de Processos:** Redução do tempo de provisionamento de VPNs (OpenVPN/pfSense) de minutos para segundos através de automação completa do ciclo de vida de usuários com Shell Script.</li>
+                                <li>**Desenvolvimento Full-Stack:** Criação de um dashboard de monitoramento (React, Node.js) para túneis IPSec, melhorando a eficiência da equipe e o tempo de resposta a incidentes.</li>
+                                <li>**Gestão de Clientes:** Principal responsável técnico pela gestão da infraestrutura de rede local (LAN/WAN) de múltiplos clientes corporativos, garantindo performance e estabilidade.</li>
+                            </ul>
+                        </div>
                     </div>
-                     <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/4 text-gray-400 font-medium"><p>JAN 2020 - SET 2021</p><p>Mhnet Telecom</p></div>
-                        <div class="md:w-3/4"><h3 class="text-xl font-bold text-white">Suporte Técnico N2</h3><ul class="mt-2 list-disc list-inside text-gray-300 space-y-1"><li>Resolução avançada de incidentes de rede e conectividade.</li><li>Configuração de equipamentos MikroTik e gerenciamento de redes ópticas (PON).</li><li>Redução de 15% no volume de chamados recorrentes através da documentação de processos.</li></ul></div>
+                    
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4 text-gray-400 font-medium"><p>FEV 2022 - JAN 2023</p><p>Mhnet Telecom</p></div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold text-white">Analista de Sistema</h3>
+                            <ul class="mt-2 list-disc list-inside text-gray-300 space-y-1">
+                                <li>Desenvolvimento de soluções automatizadas em Python para otimização de processos internos.</li>
+                                <li>Gerenciamento e análise de bases de dados PostgreSQL.</li>
+                                <li>Criação de ferramentas para melhorar a eficiência da empresa.</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </section>
+
+            <section id="sobre" class="py-20 scroll-animate">
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Sobre Mim</h2>
+                <div class="max-w-4xl mx-auto text-center text-lg leading-relaxed space-y-4">
+                    <p>Engenheiro de Redes e Cloud com 5 anos de experiência, apaixonado por construir e proteger infraestruturas de rede resilientes. Meu foco é combinar expertise em redes tradicionais e segurança com o poder da automação para resolver problemas complexos e entregar resultados de alto impacto.</p>
+                    <p>Minha abordagem vai além da administração tradicional. Tenho experiência prática no desenvolvimento de soluções que otimizam operações, como a criação de scripts em Python e Shell para automatizar o provisionamento de VPNs e a construção de dashboards de monitoramento full-stack com React e Node.js.</p>
+                    <p>Atualmente cursando Engenharia da Computação [cite: 121] e me preparando para a certificação CCNA, estou sempre em busca de novos desafios onde eu possa aplicar minhas habilidades para criar infraestruturas mais seguras, inteligentes e eficientes. Estou aberto a novas oportunidades em posições de Engenharia de Redes, Cloud ou Segurança.</p>
+                </div>
+            </section>
+
         </div>
     </main>
 
-    <!-- ===== 10. Contato Estratégico ===== -->
     <section id="contato" class="py-20 bg-gray-900">
         <div class="max-w-3xl mx-auto text-center px-4 scroll-animate">
             <h2 class="text-3xl font-bold gradient-text">Vamos conversar?</h2>
@@ -282,8 +231,8 @@
             <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
                  <a href="mailto:nfl.leonardo@gmail.com" class="inline-block bg-violet-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-violet-700 transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-violet-500/30 w-full sm:w-auto">Enviar Email</a>
                  <a href="https://wa.me/5549988701809" target="_blank" class="inline-flex items-center justify-center bg-green-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-green-700 transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-green-500/30 w-full sm:w-auto">
-                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51s-.371-.012-.57-.012c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.078 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    WhatsApp
+                     <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51s-.371-.012-.57-.012c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.078 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                     WhatsApp
                  </a>
             </div>
         </div>
@@ -293,7 +242,6 @@
         <p class="text-gray-500">&copy; 2025 Leonardo Marx. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Scripts -->
     <script>
         // --- Script para Menu Mobile ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -303,7 +251,8 @@
 
         // --- Script para Efeito de Digitação ---
         const typewriterElement = document.getElementById('typewriter');
-        const textToType = "Analista de Redes • Segurança • Automação Web";
+        // TEXTO ATUALIZADO
+        const textToType = "Engenheiro de Redes e Cloud • Segurança • Automação";
         let charIndex = 0;
         function type() {
             if (charIndex < textToType.length) {
@@ -351,13 +300,13 @@
 
         // Iniciar tudo no load
         window.addEventListener('load', () => {
+            document.querySelector('.hero-content').classList.add('visible');
             resizeCanvas();
             initParticles();
             animate();
-            setTimeout(type, 500);
+            setTimeout(type, 1200); // Atraso para iniciar após a animação do conteúdo
         });
         window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
-
     </script>
 </body>
 </html>
