@@ -1,5 +1,29 @@
 {
-  "dependencies": {
-    "tailwind": "^4.0.0"
+  "name": "marx1302.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "postcss ./src/input.css -o ./dist/output.css",
+    "watch": "postcss ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marx1302/Marx1302.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Marx1302/Marx1302.github.io/issues"
+  },
+  "homepage": "https://github.com/Marx1302/Marx1302.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.11"
   }
 }
