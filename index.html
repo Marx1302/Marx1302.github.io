@@ -8,6 +8,8 @@
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,12 +25,25 @@
     <meta name="twitter:description" content="Portfólio de Leonardo Marx – Conheça projetos em segurança, automação e infraestrutura de rede.">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/21274305?v=4">
     
-    <link href="dist/output.css" rel="stylesheet">
-
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #E5E7EB; }
+        .gradient-text { background: linear-gradient(to right, #a78bfa, #818cf8); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+        .hero-bg { position: relative; overflow: hidden; background-color: #0a0a0a; }
+        #interactive-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hero-content { opacity: 0; transform: translateY(60px); transition: opacity 1.2s cubic-bezier(.6,.3,0,1), transform 1.2s cubic-bezier(.6,.3,0,1); }
+        .hero-content.visible { opacity: 1; transform: translateY(0); }
+        .typewriter-cursor { display: inline-block; width: 3px; height: 1.5rem; background-color: #a78bfa; animation: blink 0.7s infinite; margin-left: 4px; vertical-align: middle; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .scroll-animate { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .scroll-animate.is-visible { opacity: 1; transform: translateY(0); }
+        .skill-card { background-color: #111827; border: 1px solid #1f2937; padding: 1rem; border-radius: 0.5rem; display: flex; align-items: center; gap: 0.75rem; transition: all 0.3s ease; }
+        .skill-card:hover { transform: translateY(-4px); background-color: #1f2937; border-color: #4c1d95; }
+        .skill-card svg { width: 24px; height: 24px; flex-shrink: 0; }
+    </style>
 </head>
-<body class="antialiased bg-gray-900 text-gray-300">
+<body class="antialiased">
 
-    <header class="bg-gray-900 bg-opacity-80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-800">
+    <header class="bg-black bg-opacity-80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0">
@@ -119,72 +134,46 @@
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Projetos em Destaque</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
-                        <img src="https://placehold.co/600x400/0f172a/a78bfa?text=Honeypot+e+Threat+Intel" alt="Diagrama do sistema de Honeypot e Blacklist Dinâmica" class="w-full h-48 object-cover">
-                        <div class="p-6 flex flex-col h-full">
-                            <div class="flex-grow">
-                                <h3 class="text-xl font-bold mb-2 text-white">Sistema de Threat Intelligence com Honeypot</h3>
-                                <p class="text-gray-400 mb-4 text-sm">Arquitetura de segurança proativa que captura IPs maliciosos e distribui regras de bloqueio para todos os firewalls da infraestrutura.</p>
-                                <div class="mb-4">
-                                    <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">MikroTik</span>
-                                    <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Segurança</span>
-                                    <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">API</span>
-                                </div>
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
+                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=Honeypot+e+Threat+Intel" alt="Diagrama do sistema de Honeypot e Blacklist Dinâmica" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">Sistema de Threat Intelligence com Honeypot</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Arquitetura de segurança proativa que captura IPs maliciosos, os processa e distribui regras de bloqueio para todos os firewalls da infraestrutura.</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">MikroTik</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Segurança</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Regex</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">API</span>
                             </div>
-                            <div class="mt-auto pt-4 flex items-center gap-4">
-                                <a href="projeto-honeypot.html" class="inline-block bg-violet-600 text-white font-semibold text-sm px-4 py-2 rounded-md hover:bg-violet-700 transition-colors">
-                                    Ver Estudo de Caso
-                                </a>
-                                <a href="https://github.com/Marx1302" target="_blank" class="font-semibold text-sm text-gray-400 hover:text-violet-300 transition-colors">
-                                    GitHub &rarr;
-                                </a>
-                            </div>
+                            <a href="https://github.com/Marx1302" target="_blank" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver detalhes &rarr;</a>
                         </div>
                     </div>
 
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
-                        <img src="https://placehold.co/600x400/0f172a/a78bfa?text=Automação+de+VPN" alt="Fluxograma da automação de provisionamento de VPN" class="w-full h-48 object-cover">
-                        <div class="p-6 flex flex-col h-full">
-                           <div class="flex-grow">
-                                <h3 class="text-xl font-bold mb-2 text-white">Automação de Provisionamento OpenVPN</h3>
-                                <p class="text-gray-400 mb-4 text-sm">Solução que automatiza a criação de usuários e certificados VPN no pfSense, reduzindo o tempo de provisionamento de minutos para segundos.</p>
-                                <div class="mb-4">
-                                   <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Shell Script</span>
-                                   <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">pfSense</span>
-                                   <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Automação</span>
-                                </div>
-                           </div>
-                            <div class="mt-auto pt-4 flex items-center gap-4">
-                                <a href="#" class="inline-block bg-violet-600 text-white font-semibold text-sm px-4 py-2 rounded-md hover:bg-violet-700 transition-colors">
-                                    Ver Estudo de Caso
-                                </a>
-                                <a href="https://github.com/Marx1302" target="_blank" class="font-semibold text-sm text-gray-400 hover:text-violet-300 transition-colors">
-                                    GitHub &rarr;
-                                </a>
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
+                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=Automação+de+VPN" alt="Fluxograma da automação de provisionamento de VPN" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">Automação de Provisionamento OpenVPN</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Solução completa que automatiza a criação de usuários e certificados VPN no pfSense, reduzindo o tempo de provisionamento de minutos para segundos.</p>
+                            <div class="mb-4">
+                               <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Shell Script</span>
+                               <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">pfSense</span>
+                               <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Automação</span>
                             </div>
+                            <a href="https://github.com/Marx1302" target="_blank" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver detalhes &rarr;</a>
                         </div>
                     </div>
 
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
-                        <img src="https://placehold.co/600x400/0f172a/a78bfa?text=Dashboard+IPSec" alt="Screenshot do Dashboard de monitoramento IPSec" class="w-full h-48 object-cover">
-                        <div class="p-6 flex flex-col h-full">
-                            <div class="flex-grow">
-                                <h3 class="text-xl font-bold mb-2 text-white">Dashboard de Monitoramento IPSec</h3>
-                                <p class="text-gray-400 mb-4 text-sm">Dashboard full-stack para monitoramento em tempo real do status de túneis VPN, melhorando a visibilidade e a resposta a falhas.</p>
-                                 <div class="mb-4">
-                                    <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span>
-                                    <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Node.js</span>
-                                    <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Full-Stack</span>
-                                </div>
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg shadow-violet-900/20 transform hover:-translate-y-2 hover:shadow-violet-500/40 transition-all duration-300">
+                        <img src="https://placehold.co/600x400/0a0a0a/a78bfa?text=Dashboard+IPSec" alt="Screenshot do Dashboard de monitoramento IPSec" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">Dashboard de Monitoramento IPSec</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Dashboard full-stack para monitoramento em tempo real do status, tráfego e latência de túneis VPN IPSec, melhorando a visibilidade e a resposta a falhas.</p>
+                             <div class="mb-4">
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">React</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Node.js</span>
+                                <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Full-Stack</span>
                             </div>
-                            <div class="mt-auto pt-4 flex items-center gap-4">
-                                <a href="#" class="inline-block bg-violet-600 text-white font-semibold text-sm px-4 py-2 rounded-md hover:bg-violet-700 transition-colors">
-                                    Ver Demo Ao Vivo
-                                </a>
-                                <a href="https://github.com/Marx1302" target="_blank" class="font-semibold text-sm text-gray-400 hover:text-violet-300 transition-colors">
-                                    GitHub &rarr;
-                                </a>
-                            </div>
+                            <a href="https://github.com/Marx1302" target="_blank" class="font-semibold text-violet-400 hover:text-violet-300 transition-colors">Ver detalhes &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -193,10 +182,11 @@
             <section id="experiencia" class="py-20 scroll-animate">
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Experiência Profissional</h2>
                 <div class="max-w-4xl mx-auto space-y-12">
+                    
                     <div class="flex flex-col md:flex-row gap-6">
                         <div class="md:w-1/4 text-gray-400 font-medium"><p>FEV 2023 - PRESENTE</p><p>Optidata</p></div>
                         <div class="md:w-3/4">
-                            [cite_start]<h3 class="text-xl font-bold text-white">Technical Network Analyst [cite: 68]</h3>
+                            <h3 class="text-xl font-bold text-white">Technical Network Analyst</h3>
                             <p class="mt-2 text-gray-300 text-sm md:text-base">Atuo como ponto focal técnico para a segurança e otimização de infraestruturas de rede em ambientes de cloud privada, projetando e gerenciando soluções para garantir máxima performance e disponibilidade.</p>
                             <ul class="mt-4 list-disc list-inside text-gray-300 space-y-2">
                                 <li>**Segurança Proativa:** Arquitetura de um sistema de Threat Intelligence com honeypots em MikroTik e integração de blocklists (SERPRO, Spamhaus) para automatizar a resposta a ameaças em toda a infraestrutura.</li>
@@ -206,17 +196,19 @@
                             </ul>
                         </div>
                     </div>
-                     <div class="flex flex-col md:flex-row gap-6">
-                        [cite_start]<div class="md:w-1/4 text-gray-400 font-medium"><p>FEV 2022 - JAN 2023</p><p>Mhnet Telecom [cite: 79]</p></div>
+                    
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4 text-gray-400 font-medium"><p>FEV 2022 - JAN 2023</p><p>Mhnet Telecom</p></div>
                         <div class="md:w-3/4">
-                            [cite_start]<h3 class="text-xl font-bold text-white">Analista de sistema [cite: 81]</h3>
+                            <h3 class="text-xl font-bold text-white">Analista de Sistema</h3>
                             <ul class="mt-2 list-disc list-inside text-gray-300 space-y-1">
-                                [cite_start]<li>Desenvolvimento de soluções automatizadas em Python para otimização de processos internos. [cite: 84]</li>
-                                [cite_start]<li>Gerenciamento e análise de bases de dados PostgreSQL. [cite: 85]</li>
-                                [cite_start]<li>Criação de ferramentas para melhorar a eficiência da empresa. [cite: 86]</li>
+                                <li>Desenvolvimento de soluções automatizadas em Python para otimização de processos internos.</li>
+                                <li>Gerenciamento e análise de bases de dados PostgreSQL.</li>
+                                <li>Criação de ferramentas para melhorar a eficiência da empresa.</li>
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </section>
 
@@ -224,15 +216,15 @@
                 <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Sobre Mim</h2>
                 <div class="max-w-4xl mx-auto text-center text-lg leading-relaxed space-y-4">
                     <p>Engenheiro de Redes e Cloud com 5 anos de experiência, apaixonado por construir e proteger infraestruturas de rede resilientes. Meu foco é combinar expertise em redes tradicionais e segurança com o poder da automação para resolver problemas complexos e entregar resultados de alto impacto.</p>
-                    <p>Minha abordagem vai além da administração tradicional. [cite_start]Tenho experiência prática no desenvolvimento de soluções que otimizam operações, como a criação de scripts em Python [cite: 84] para automatizar o provisionamento de VPNs e a construção de dashboards de monitoramento full-stack com React e Node.js.</p>
-                    [cite_start]<p>Atualmente cursando Engenharia da Computação [cite: 121] e me preparando para a certificação CCNA, estou sempre em busca de novos desafios onde eu possa aplicar minhas habilidades para criar infraestruturas mais seguras, inteligentes e eficientes. Estou aberto a novas oportunidades em posições de Engenharia de Redes, Cloud ou Segurança.</p>
+                    <p>Minha abordagem vai além da administração tradicional. Tenho experiência prática no desenvolvimento de soluções que otimizam operações, como a criação de scripts em Python e Shell para automatizar o provisionamento de VPNs e a construção de dashboards de monitoramento full-stack com React e Node.js.</p>
+                    <p>Atualmente cursando Engenharia da Computação [cite: 121] e me preparando para a certificação CCNA, estou sempre em busca de novos desafios onde eu possa aplicar minhas habilidades para criar infraestruturas mais seguras, inteligentes e eficientes. Estou aberto a novas oportunidades em posições de Engenharia de Redes, Cloud ou Segurança.</p>
                 </div>
             </section>
 
         </div>
     </main>
 
-    <section id="contato" class="py-20 bg-gray-800">
+    <section id="contato" class="py-20 bg-gray-900">
         <div class="max-w-3xl mx-auto text-center px-4 scroll-animate">
             <h2 class="text-3xl font-bold gradient-text">Vamos conversar?</h2>
             <p class="mt-4 text-lg text-gray-400">Estou disponível para novos desafios e projetos. Entre em contato para discutirmos como minhas habilidades podem agregar valor à sua empresa.</p>
@@ -251,20 +243,15 @@
     </footer>
 
     <script>
-        // Script para Menu Mobile
+        // --- Script para Menu Mobile ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if(link.getAttribute('href').startsWith('#')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-        // Script para Efeito de Digitação
+        // --- Script para Efeito de Digitação ---
         const typewriterElement = document.getElementById('typewriter');
+        // TEXTO ATUALIZADO
         const textToType = "Engenheiro de Redes e Cloud • Segurança • Automação";
         let charIndex = 0;
         function type() {
@@ -275,7 +262,7 @@
             }
         }
 
-        // Script para Fundo Interativo (Canvas)
+        // --- Script para Fundo Interativo (Canvas) ---
         const canvas = document.getElementById('interactive-bg');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -304,7 +291,7 @@
         }
         function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => { p.update(); p.draw(); }); connectParticles(); requestAnimationFrame(animate); }
         
-        // Script para Animação de Scroll
+        // --- Script para Animação de Scroll ---
         const animatedElements = document.querySelectorAll('.scroll-animate');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
@@ -317,9 +304,9 @@
             resizeCanvas();
             initParticles();
             animate();
-            setTimeout(type, 1200);
+            setTimeout(type, 1200); // Atraso para iniciar após a animação do conteúdo
         });
         window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
     </script>
 </body>
-</html>c
+</html>
