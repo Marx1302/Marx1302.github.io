@@ -6,25 +6,20 @@
     <title>Leonardo Marx | Engenheiro de Sistemas e Redes • Segurança & Automação</title>
     <meta name="description" content="Portfólio de Leonardo Marx, Engenheiro de Sistemas e Redes especializado em segurança, automação com Python, infraestrutura VMware e ambientes híbridos.">
     
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
 
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Meta Tags para Redes Sociais -->
     <meta property="og:title" content="Leonardo Marx | Engenheiro de Sistemas e Redes">
     <meta property="og:description" content="Conheça projetos em segurança proativa, automação de infraestrutura e gestão de sistemas complexos.">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/21274305?v=4">
     <meta property="og:url" content="https://marx1302.github.io/">
     <meta property="og:type" content="website">
 
-    <!-- Estilos Customizados Simples -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -34,6 +29,10 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+        }
+        .lang-switch button.active {
+            color: #a78bfa;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -47,10 +46,15 @@
                     <a href="#home" class="text-xl font-bold text-gray-100 hover:text-white transition-colors">Leonardo Marx</a>
                 </div>
                 <nav class="hidden md:flex items-center space-x-6">
-                    <a href="#sobre" class="text-gray-300 hover:text-violet-400 transition-colors">Sobre</a>
-                    <a href="#projetos" class="text-gray-300 hover:text-violet-400 transition-colors">Projetos</a>
-                    <a href="#experiencia" class="text-gray-300 hover:text-violet-400 transition-colors">Experiência</a>
-                    <a href="#contato" class="bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">Contato</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-violet-400 transition-colors" data-lang-key="nav_about">Sobre</a>
+                    <a href="#projetos" class="text-gray-300 hover:text-violet-400 transition-colors" data-lang-key="nav_projects">Projetos</a>
+                    <a href="#experiencia" class="text-gray-300 hover:text-violet-400 transition-colors" data-lang-key="nav_experience">Experiência</a>
+                    <div class="lang-switch flex items-center space-x-2 text-sm font-medium text-gray-400">
+                        <button data-lang="pt" class="hover:text-white transition-colors">PT</button>
+                        <span>/</span>
+                        <button data-lang="en" class="hover:text-white transition-colors">EN</button>
+                    </div>
+                    <a href="#contato" class="bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105" data-lang-key="nav_contact">Contato</a>
                 </nav>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
@@ -61,10 +65,15 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-                <a href="#sobre" class="block text-gray-300 hover:bg-gray-800 rounded-md px-3 py-2">Sobre</a>
-                <a href="#projetos" class="block text-gray-300 hover:bg-gray-800 rounded-md px-3 py-2">Projetos</a>
-                <a href="#experiencia" class="block text-gray-300 hover:bg-gray-800 rounded-md px-3 py-2">Experiência</a>
-                <a href="#contato" class="block bg-violet-600 text-white rounded-md px-3 py-3 mt-2">Contato</a>
+                <a href="#sobre" class="block text-gray-300 hover:bg-gray-800 rounded-md px-3 py-2" data-lang-key="nav_about_mobile">Sobre</a>
+                <a href="#projetos" class="block text-gray-300 hover:bg-gray-800 rounded-md px-3 py-2" data-lang-key="nav_projects_mobile">Projetos</a>
+                <a href="#experiencia" class="block text-gray-300 hover:bg-gray-800 rounded-md px-3 py-2" data-lang-key="nav_experience_mobile">Experiência</a>
+                <a href="#contato" class="block bg-violet-600 text-white rounded-md px-3 py-3 mt-2" data-lang-key="nav_contact_mobile">Contato</a>
+                 <div class="lang-switch flex items-center justify-center space-x-2 text-sm font-medium text-gray-400 pt-4">
+                    <button data-lang="pt" class="hover:text-white transition-colors">PT</button>
+                    <span>/</span>
+                    <button data-lang="en" class="hover:text-white transition-colors">EN</button>
+                </div>
             </div>
         </div>
     </header>
@@ -75,7 +84,7 @@
             <div class="max-w-4xl mx-auto px-4">
                 <img src="https://avatars.githubusercontent.com/u/21274305?v=4" alt="Foto de Leonardo Marx" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-violet-500 shadow-lg">
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight gradient-text">Leonardo Marx</h1>
-                <p class="mt-4 text-xl md:text-2xl font-light text-gray-400">Engenheiro de Sistemas e Redes • Segurança • Automação</p>
+                <p class="mt-4 text-xl md:text-2xl font-light text-gray-400" data-lang-key="hero_subtitle">Engenheiro de Sistemas e Redes • Segurança • Automação</p>
                 <div class="mt-8 flex justify-center space-x-6">
                     <a href="https://github.com/Marx1302" target="_blank" class="text-gray-400 hover:text-violet-400 transition-transform duration-300 hover:scale-110">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
@@ -89,92 +98,73 @@
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
             
-            <!-- ===== Sobre Mim ===== -->
             <section id="sobre" class="py-16">
-                <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Sobre Mim</h2>
+                <h2 class="text-3xl font-bold text-center mb-8 gradient-text" data-lang-key="about_title">Sobre Mim</h2>
                 <div class="max-w-3xl mx-auto text-center text-lg leading-relaxed space-y-4">
-                    <p>Engenheiro de Sistemas e Redes com 5 anos de experiência, apaixonado por construir e proteger infraestruturas resilientes. Meu foco é combinar expertise em redes, segurança e virtualização com o poder da automação para resolver problemas complexos e entregar resultados de alto impacto.</p>
-                    <p>Com experiência prática em ambientes Windows e Linux, gestão de Active Directory e desenvolvimento de scripts em Python e Shell, busco desafios onde possa aplicar minhas habilidades para criar infraestruturas mais seguras, inteligentes e eficientes.</p>
+                    <p data-lang-key="about_p1">Engenheiro de Sistemas e Redes com 5 anos de experiência, apaixonado por construir e proteger infraestruturas resilientes. Meu foco é combinar expertise em redes, segurança e virtualização com o poder da automação para resolver problemas complexos e entregar resultados de alto impacto.</p>
+                    <p data-lang-key="about_p2">Com experiência prática em ambientes Windows e Linux, gestão de Active Directory e desenvolvimento de scripts em Python e Shell, busco desafios onde possa aplicar minhas habilidades para criar infraestruturas mais seguras, inteligentes e eficientes.</p>
                 </div>
             </section>
 
-            <!-- ===== Projetos em Destaque ===== -->
             <section id="projetos" class="py-16">
-                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Projetos em Destaque</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-lang-key="projects_title">Projetos em Destaque</h2>
                 <div class="space-y-16">
-                    <!-- Projeto 1: Honeypot -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div>
-                            <h3 class="text-2xl font-bold text-white mb-2">Sistema de Threat Intelligence com Honeypot</h3>
-                            <p class="text-violet-400 font-semibold mb-4">Problema:</p>
-                            <p class="mb-4">O processo de bloqueio de IPs maliciosos era manual, reativo e ineficaz, exigindo atualização individual em múltiplos firewalls e deixando a rede vulnerável a novas ameaças.</p>
-                            <p class="text-violet-400 font-semibold mb-4">Solução:</p>
-                            <p>Desenvolvi um sistema automatizado que utiliza um honeypot para capturar atacantes, processa os dados com scripts, enriquece com listas públicas e distribui uma blacklist unificada para todos os firewalls da rede via API, reduzindo o tempo de resposta de horas para minutos.</p>
-                            <div class="mt-4">
-                                <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Segurança</span>
-                                <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Automação</span>
-                                <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">MikroTik</span>
-                                <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">API</span>
-                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2" data-lang-key="p1_title">Sistema de Threat Intelligence com Honeypot</h3>
+                            <p class="text-violet-400 font-semibold mb-4" data-lang-key="p1_problem_label">Problema:</p>
+                            <p class="mb-4" data-lang-key="p1_problem_desc">O processo de bloqueio de IPs maliciosos era manual, reativo e ineficaz, exigindo atualização individual em múltiplos firewalls e deixando a rede vulnerável a novas ameaças.</p>
+                            <p class="text-violet-400 font-semibold mb-4" data-lang-key="p1_solution_label">Solução:</p>
+                            <p data-lang-key="p1_solution_desc">Desenvolvi um sistema automatizado que utiliza um honeypot para capturar atacantes, processa os dados com scripts, enriquece com listas públicas e distribui uma blacklist unificada para todos os firewalls da rede via API, reduzindo o tempo de resposta de horas para minutos.</p>
                         </div>
                         <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
                              <img src="https://placehold.co/600x400/0f172a/a78bfa?text=Diagrama+do+Honeypot" alt="Diagrama do sistema de Honeypot" class="w-full rounded-md shadow-lg">
                         </div>
                     </div>
-                    <!-- Projeto 2: Automação VPN -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 md:order-last">
                              <img src="https://placehold.co/600x400/0f172a/a78bfa?text=Automação+de+VPN" alt="Fluxo de automação de VPN" class="w-full rounded-md shadow-lg">
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-white mb-2">Automação de Provisionamento OpenVPN</h3>
-                            <p class="text-violet-400 font-semibold mb-4">Problema:</p>
-                            <p class="mb-4">A criação de novos usuários de VPN no pfSense era um processo manual, demorado e propenso a erros de configuração, impactando a agilidade da equipe.</p>
-                            <p class="text-violet-400 font-semibold mb-4">Solução:</p>
-                            <p>Criei um conjunto de scripts em Shell que automatiza todo o ciclo de vida do usuário, desde a criação no pfSense e a geração de certificados até a exportação do pacote de cliente, garantindo um provisionamento seguro e quase instantâneo.</p>
-                            <div class="mt-4">
-                                <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Shell Script</span>
-                                <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">pfSense</span>
-                                <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2">Segurança</span>
-                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2" data-lang-key="p2_title">Automação de Provisionamento OpenVPN</h3>
+                            <p class="text-violet-400 font-semibold mb-4" data-lang-key="p2_problem_label">Problema:</p>
+                            <p class="mb-4" data-lang-key="p2_problem_desc">A criação de novos usuários de VPN no pfSense era um processo manual, demorado e propenso a erros de configuração, impactando a agilidade da equipe.</p>
+                            <p class="text-violet-400 font-semibold mb-4" data-lang-key="p2_solution_label">Solução:</p>
+                            <p data-lang-key="p2_solution_desc">Criei um conjunto de scripts em Shell que automatiza todo o ciclo de vida do usuário, desde a criação no pfSense e a geração de certificados até a exportação do pacote de cliente, garantindo um provisionamento seguro e quase instantâneo.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- ===== Experiência Profissional ===== -->
             <section id="experiencia" class="py-16">
-                <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Experiência Profissional</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-lang-key="experience_title">Experiência Profissional</h2>
                 <div class="max-w-3xl mx-auto border-l-2 border-violet-500 pl-8 space-y-12">
-                    <!-- Experiência 1: Optidata -->
                     <div>
-                        <p class="text-sm text-gray-400">FEV 2023 - PRESENTE</p>
-                        <h3 class="text-xl font-bold text-white mt-1">Technical Network Analyst na Optidata</h3>
+                        <p class="text-sm text-gray-400" data-lang-key="exp1_date">FEV 2023 - PRESENTE</p>
+                        <h3 class="text-xl font-bold text-white mt-1" data-lang-key="exp1_title">Technical Network Analyst na Optidata</h3>
                         <ul class="mt-2 list-disc list-inside text-gray-300 space-y-1">
-                            <li>Arquitetura de soluções de segurança proativa, incluindo honeypots e sistemas de Threat Intelligence.</li>
-                            <li>Gestão de ambientes Windows Server, Active Directory, LDAP e Radius para autenticação de serviços.</li>
-                            <li>Automação de processos de infraestrutura com Python e Shell Script.</li>
-                            <li>Desenvolvimento de dashboards de monitoramento full-stack (React, Node.js).</li>
+                            <li data-lang-key="exp1_li1">Arquitetura de soluções de segurança proativa, incluindo honeypots e sistemas de Threat Intelligence.</li>
+                            <li data-lang-key="exp1_li2">Gestão de ambientes Windows Server, Active Directory, LDAP e Radius para autenticação de serviços.</li>
+                            <li data-lang-key="exp1_li3">Automação de processos de infraestrutura com Python e Shell Script.</li>
+                            <li data-lang-key="exp1_li4">Desenvolvimento de dashboards de monitoramento full-stack (React, Node.js).</li>
                         </ul>
                     </div>
-                    <!-- Experiência 2: Mhnet -->
                     <div>
-                        <p class="text-sm text-gray-400">FEV 2022 - JAN 2023</p>
-                        <h3 class="text-xl font-bold text-white mt-1">Analista de Sistema na Mhnet Telecom</h3>
+                        <p class="text-sm text-gray-400" data-lang-key="exp2_date">FEV 2022 - JAN 2023</p>
+                        <h3 class="text-xl font-bold text-white mt-1" data-lang-key="exp2_title">Analista de Sistema na Mhnet Telecom</h3>
                         <ul class="mt-2 list-disc list-inside text-gray-300 space-y-1">
-                            <li>Desenvolvimento de automações em Python para otimização de processos internos.</li>
-                            <li>Gerenciamento e análise de bases de dados PostgreSQL.</li>
+                            <li data-lang-key="exp2_li1">Desenvolvimento de automações em Python para otimização de processos internos.</li>
+                            <li data-lang-key="exp2_li2">Gerenciamento e análise de bases de dados PostgreSQL.</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- ===== Contato ===== -->
             <section id="contato" class="py-16 text-center">
-                 <h2 class="text-3xl font-bold gradient-text">Vamos conversar?</h2>
-                 <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Estou buscando novos desafios e pronto para agregar valor à sua equipe. Entre em contato para discutirmos como minhas habilidades podem beneficiar sua empresa.</p>
+                 <h2 class="text-3xl font-bold gradient-text" data-lang-key="contact_title">Vamos conversar?</h2>
+                 <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto" data-lang-key="contact_desc">Estou buscando novos desafios e pronto para agregar valor à sua equipe. Entre em contato para discutirmos como minhas habilidades podem beneficiar sua empresa.</p>
                  <div class="mt-8">
-                    <a href="mailto:nfl.leonardo@gmail.com" class="bg-violet-600 hover:bg-violet-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-violet-500/30">
+                    <a href="mailto:nfl.leonardo@gmail.com" class="bg-violet-600 hover:bg-violet-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-violet-500/30" data-lang-key="contact_button">
                         Enviar Email
                     </a>
                  </div>
@@ -183,11 +173,136 @@
     </main>
 
     <footer class="text-center py-8 mt-16 border-t border-gray-800">
-        <p class="text-gray-500">&copy; 2025 Leonardo Marx. Construído com HTML e Tailwind CSS.</p>
+        <p class="text-gray-500" data-lang-key="footer_text">&copy; 2025 Leonardo Marx. Construído com HTML e Tailwind CSS.</p>
     </footer>
 
     <script>
-        // Script para Menu Mobile
+        // --- LÓGICA DE TRADUÇÃO ---
+        const translations = {
+            en: {
+                // Nav
+                nav_about: "About",
+                nav_projects: "Projects",
+                nav_experience: "Experience",
+                nav_contact: "Contact",
+                nav_about_mobile: "About",
+                nav_projects_mobile: "Projects",
+                nav_experience_mobile: "Experience",
+                nav_contact_mobile: "Contact",
+                // Hero
+                hero_subtitle: "Systems & Network Engineer • Security • Automation",
+                // About
+                about_title: "About Me",
+                about_p1: "Systems and Network Engineer with 5 years of experience, passionate about building and securing resilient infrastructures. My focus is on combining expertise in networking, security, and virtualization with the power of automation to solve complex problems and deliver high-impact results.",
+                about_p2: "With hands-on experience in Windows and Linux environments, Active Directory management, and script development in Python and Shell, I seek challenges where I can apply my skills to create safer, smarter, and more efficient infrastructures.",
+                // Projects
+                projects_title: "Featured Projects",
+                p1_title: "Threat Intelligence System with Honeypot",
+                p1_problem_label: "Problem:",
+                p1_problem_desc: "The process of blocking malicious IPs was manual, reactive, and ineffective, requiring individual updates on multiple firewalls and leaving the network vulnerable to new threats.",
+                p1_solution_label: "Solution:",
+                p1_solution_desc: "I developed an automated system that uses a honeypot to capture attackers, processes the data with scripts, enriches it with public reputation lists, and distributes a unified blacklist to all network firewalls via API, reducing response time from hours to minutes.",
+                p2_title: "OpenVPN Provisioning Automation",
+                p2_problem_label: "Problem:",
+                p2_problem_desc: "Creating new OpenVPN users on pfSense was a manual, time-consuming, and error-prone process, impacting the team's agility.",
+                p2_solution_label: "Solution:",
+                p2_solution_desc: "I created a set of Shell scripts that automates the entire user lifecycle, from creation in pfSense and certificate generation to client package export, ensuring secure and almost instantaneous provisioning.",
+                // Experience
+                experience_title: "Professional Experience",
+                exp1_date: "FEB 2023 - PRESENT",
+                exp1_title: "Technical Network Analyst at Optidata",
+                exp1_li1: "Architecting proactive security solutions, including honeypots and Threat Intelligence systems.",
+                exp1_li2: "Managing Windows Server environments, Active Directory, LDAP, and Radius for service authentication.",
+                exp1_li3: "Automating infrastructure processes with Python and Shell Script.",
+                exp1_li4: "Developing full-stack monitoring dashboards (React, Node.js).",
+                exp2_date: "FEB 2022 - JAN 2023",
+                exp2_title: "System Analyst at Mhnet Telecom",
+                exp2_li1: "Developing automations in Python to optimize internal processes.",
+                exp2_li2: "Managing and analyzing PostgreSQL databases.",
+                // Contact
+                contact_title: "Let's talk?",
+                contact_desc: "I am looking for new challenges and ready to add value to your team. Contact me to discuss how my skills can benefit your company.",
+                contact_button: "Send Email",
+                // Footer
+                footer_text: "© 2025 Leonardo Marx. Built with HTML & Tailwind CSS."
+            },
+            pt: {
+                // Nav
+                nav_about: "Sobre",
+                nav_projects: "Projetos",
+                nav_experience: "Experiência",
+                nav_contact: "Contato",
+                nav_about_mobile: "Sobre",
+                nav_projects_mobile: "Projetos",
+                nav_experience_mobile: "Experiência",
+                nav_contact_mobile: "Contato",
+                // Hero
+                hero_subtitle: "Engenheiro de Sistemas e Redes • Segurança • Automação",
+                // About
+                about_title: "Sobre Mim",
+                about_p1: "Engenheiro de Sistemas e Redes com 5 anos de experiência, apaixonado por construir e proteger infraestruturas resilientes. Meu foco é combinar expertise em redes, segurança e virtualização com o poder da automação para resolver problemas complexos e entregar resultados de alto impacto.",
+                about_p2: "Com experiência prática em ambientes Windows e Linux, gestão de Active Directory e desenvolvimento de scripts em Python e Shell, busco desafios onde possa aplicar minhas habilidades para criar infraestruturas mais seguras, inteligentes e eficientes.",
+                // Projects
+                projects_title: "Projetos em Destaque",
+                p1_title: "Sistema de Threat Intelligence com Honeypot",
+                p1_problem_label: "Problema:",
+                p1_problem_desc: "O processo de bloqueio de IPs maliciosos era manual, reativo e ineficaz, exigindo atualização individual em múltiplos firewalls e deixando a rede vulnerável a novas ameaças.",
+                p1_solution_label: "Solução:",
+                p1_solution_desc: "Desenvolvi um sistema automatizado que utiliza um honeypot para capturar atacantes, processa os dados com scripts, enriquece com listas públicas e distribui uma blacklist unificada para todos os firewalls da rede via API, reduzindo o tempo de resposta de horas para minutos.",
+                p2_title: "Automação de Provisionamento OpenVPN",
+                p2_problem_label: "Problema:",
+                p2_problem_desc: "A criação de novos usuários de VPN no pfSense era um processo manual, demorado e propenso a erros de configuração, impactando a agilidade da equipe.",
+                p2_solution_label: "Solução:",
+                p2_solution_desc: "Criei um conjunto de scripts em Shell que automatiza todo o ciclo de vida do usuário, desde a criação no pfSense e a geração de certificados até a exportação do pacote de cliente, garantindo um provisionamento seguro e quase instantâneo.",
+                // Experience
+                experience_title: "Experiência Profissional",
+                exp1_date: "FEV 2023 - PRESENTE",
+                exp1_title: "Technical Network Analyst na Optidata",
+                exp1_li1: "Arquitetura de soluções de segurança proativa, incluindo honeypots e sistemas de Threat Intelligence.",
+                exp1_li2: "Gestão de ambientes Windows Server, Active Directory, LDAP e Radius para autenticação de serviços.",
+                exp1_li3: "Automação de processos de infraestrutura com Python e Shell Script.",
+                exp1_li4: "Desenvolvimento de dashboards de monitoramento full-stack (React, Node.js).",
+                exp2_date: "FEV 2022 - JAN 2023",
+                exp2_title: "Analista de Sistema na Mhnet Telecom",
+                exp2_li1: "Desenvolvimento de automações em Python para otimização de processos internos.",
+                exp2_li2: "Gerenciamento e análise de bases de dados PostgreSQL.",
+                // Contact
+                contact_title: "Vamos conversar?",
+                contact_desc: "Estou buscando novos desafios e pronto para agregar valor à sua equipe. Entre em contato para discutirmos como minhas habilidades podem beneficiar sua empresa.",
+                contact_button: "Enviar Email",
+                // Footer
+                footer_text: "© 2025 Leonardo Marx. Construído com HTML e Tailwind CSS."
+            }
+        };
+
+        const setLanguage = (lang) => {
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.dataset.langKey;
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+            localStorage.setItem('language', lang);
+            
+            // Atualiza a classe 'active' nos botões
+            document.querySelectorAll('.lang-switch button').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        };
+
+        // Event listeners para os botões de idioma
+        document.querySelectorAll('.lang-switch button').forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                setLanguage(event.target.dataset.lang);
+            });
+        });
+
+        // Define o idioma inicial com base no localStorage ou no navegador
+        const initialLang = localStorage.getItem('language') || (navigator.language.startsWith('pt') ? 'pt' : 'en');
+        setLanguage(initialLang);
+
+        // --- LÓGICA DO MENU MOBILE ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenu.querySelectorAll('a').forEach(link => {
