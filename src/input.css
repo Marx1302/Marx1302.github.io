@@ -1,17 +1,140 @@
+/* Importa as camadas base do Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0a0a0a;
-    color: #E5E7EB;
+/* Aplica estilos base e classes customizadas usando @layer */
+@layer base {
+    body {
+        @apply font-sans bg-gray-900 text-gray-300 antialiased;
+    }
 }
 
-.gradient-text {
-    background: linear-gradient(to right, #a78bfa, #818cf8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+@layer components {
+    /* Estilos do Cabeçalho */
+    .gradient-text-header {
+        @apply bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent;
+    }
+    .nav-link {
+        @apply text-gray-300 hover:text-violet-400 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-violet-400 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-full;
+    }
+    .contact-button {
+        @apply bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105;
+    }
+    .mobile-link {
+        @apply block text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-base font-medium;
+    }
+    .mobile-link-contact {
+        @apply block bg-violet-600 text-white rounded-md px-3 py-3 text-base font-medium mt-2;
+    }
+
+    /* Estilos da Seção Hero */
+    .hero-bg {
+        @apply relative overflow-hidden bg-gray-900;
+    }
+    #interactive-bg {
+        @apply absolute top-0 left-0 w-full h-full z-0;
+    }
+    .hero-content {
+        @apply opacity-0 transform translate-y-12 transition-all duration-1000 ease-out;
+    }
+    .hero-content.visible {
+        @apply opacity-100 translate-y-0;
+    }
+    .gradient-text {
+        @apply bg-gradient-to-r from-violet-400 via-violet-500 to-indigo-500 bg-clip-text text-transparent;
+    }
+    .typewriter-cursor {
+        @apply inline-block w-0.5 h-6 bg-violet-400 animate-blink ml-1 align-middle;
+    }
+    .hero-button-primary {
+        @apply bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 duration-300 shadow-lg shadow-violet-500/30;
+    }
+    .hero-button-secondary {
+        @apply bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 duration-300;
+    }
+
+    /* Estilos de Seção Genéricos */
+    .section-title {
+        @apply text-3xl font-bold text-center mb-12 gradient-text;
+    }
+    .scroll-animate {
+        @apply opacity-0 transform translate-y-8 transition-all duration-700 ease-out;
+    }
+    .scroll-animate.is-visible {
+        @apply opacity-100 translate-y-0;
+    }
+
+    /* Estilos de Cards (Skills e Projetos) */
+    .skill-column {
+        @apply space-y-4;
+    }
+    .skill-column-title {
+        @apply font-bold text-xl text-violet-400 mb-4 text-center;
+    }
+    .skill-card {
+        @apply bg-gray-800/50 border border-gray-700 p-4 rounded-lg flex items-center gap-4 transition-all duration-300 hover:-translate-y-1 hover:bg-gray-800 hover:border-violet-600;
+    }
+    .skill-card svg {
+        @apply w-6 h-6 flex-shrink-0;
+    }
+    .project-card {
+        @apply bg-gray-800 rounded-lg overflow-hidden shadow-lg shadow-violet-900/10 transform hover:-translate-y-2 hover:shadow-violet-500/20 transition-all duration-300 flex flex-col;
+    }
+    .project-title {
+        @apply text-xl font-bold mb-2 text-white;
+    }
+    .project-description {
+        @apply text-gray-400 mb-4 text-sm;
+    }
+    .project-tags {
+        @apply mb-4;
+    }
+    .tag {
+        @apply inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-violet-300 mr-2 mb-2;
+    }
+    .project-links {
+        @apply mt-auto pt-4 flex items-center gap-4;
+    }
+    .project-button-primary {
+        @apply inline-block bg-violet-600 text-white font-semibold text-sm px-4 py-2 rounded-md hover:bg-violet-700 transition-colors;
+    }
+    .project-button-secondary {
+        @apply font-semibold text-sm text-gray-400 hover:text-violet-300 transition-colors;
+    }
+
+    /* Estilos da Experiência */
+    .experience-item {
+        @apply flex flex-col md:flex-row gap-6;
+    }
+    .experience-date {
+        @apply md:w-1/4 text-gray-400 font-medium;
+    }
+    .experience-details {
+        @apply md:w-3/4;
+    }
+    .experience-title {
+        @apply text-xl font-bold text-white;
+    }
+    .experience-summary {
+        @apply mt-2 text-gray-300 text-sm md:text-base;
+    }
+    .experience-list {
+        @apply mt-4 list-disc list-inside text-gray-300 space-y-2;
+    }
+
+    /* Estilos do Contato */
+    .contact-button-primary {
+        @apply inline-block bg-violet-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-violet-700 transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-violet-500/30 w-full sm:w-auto;
+    }
+    .contact-button-secondary {
+        @apply inline-flex items-center justify-center bg-green-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-green-700 transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-green-500/30 w-full sm:w-auto;
+    }
+}
+
+/* Animação do cursor de digitação */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
